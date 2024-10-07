@@ -12,37 +12,41 @@ const Hero = () => {
     {
       _id: "1",
       imageUrls: ["/assets/banner-1.jpg"],
-      title: "Project Design and estimation department",
-      subtitle: "Discover the world's finest landscapes",
+      title: "Project Design & Estimation Department",
+      subtitle:
+        "Providing comprehensive design services for various equipment and steel structures, ensuring precision and innovative solutions for your project needs.",
     },
     {
       _id: "2",
       imageUrls: ["/assets/banner-2.jpg"],
-      title: "Adventure Awaits",
-      subtitle: "Embark on a journey like never before",
+      title: "Manufacturing Department",
+      subtitle:
+        "Specializing in producing high-quality products using cutting-edge machinery, ensuring durability and efficiency in every piece we manufacture.",
     },
     {
       _id: "3",
       imageUrls: ["/assets/banner-3.jpg"],
-      title: "Feel the Serenity",
-      subtitle: "Escape the noise and find peace",
+      title: "Quality Control Department",
+      subtitle:
+        "Ensuring our products meet the highest standards through rigorous testing and modern techniques, delivering excellence in every detail.",
     },
     {
       _id: "4",
       imageUrls: ["/assets/banner-4.jpg"],
-      title: "Majestic Mountains",
-      subtitle: "Breathe in the fresh air of the mountains",
+      title: "Research & Development",
+      subtitle:
+        "Focused on continuous innovation, developing new technologies and improving processes to provide state-of-the-art solutions to our clients.",
     },
     {
       _id: "5",
       imageUrls: ["/assets/banner-5.jpg"],
-      title: "Ocean Vibes",
-      subtitle: "Let the waves calm your soul",
+      title: "Customer Service",
+      subtitle:
+        "Dedicated to delivering exceptional customer support, offering professional assistance to meet your needs with efficiency and care.",
     },
   ];
 
   const handleSlideChange = () => {
-    // Reset animation classes for active slide content
     const activeSlide = document.querySelector(".swiper-slide-active");
     const title = activeSlide.querySelector(".hero-title");
     const subtitle = activeSlide.querySelector(".hero-subtitle");
@@ -50,12 +54,8 @@ const Hero = () => {
     if (title && subtitle) {
       title.classList.remove("animate-fadeInUp");
       subtitle.classList.remove("animate-fadeInUp");
-
-      // Force reflow to restart animations
       void title.offsetWidth;
       void subtitle.offsetWidth;
-
-      // Add animation classes back
       title.classList.add("animate-fadeInUp");
       subtitle.classList.add("animate-fadeInUp");
     }
@@ -68,10 +68,7 @@ const Hero = () => {
         navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }}
         modules={[Navigation, Autoplay]}
         loop={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
         onSlideChange={handleSlideChange}
       >
         {heroBanners.map((banner) => (
@@ -83,14 +80,11 @@ const Hero = () => {
                 backgroundSize: "cover",
               }}
             >
-              {/* Background overlay */}
               <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-
-              {/* Text Content with Background Overlay */}
               <div className="absolute max-w-5xl mx-auto w-[90%] inset-0 flex flex-col items-center justify-center text-center text-white px-4">
                 <div className="bg-black bg-opacity-60 p-4 md:p-8 rounded-lg shadow-lg">
                   <h1
-                    className="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 md:mb-4 opacity-0 animate-fadeInUp"
+                    className="hero-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 opacity-0 animate-fadeInUp"
                     style={{
                       animationDuration: "1s",
                       animationDelay: "0.3s",
@@ -100,7 +94,7 @@ const Hero = () => {
                     {banner.title}
                   </h1>
                   <p
-                    className="hero-subtitle text-base sm:text-lg md:text-2xl lg:text-xl opacity-0 animate-fadeInUp"
+                    className="hero-subtitle text-sm sm:text-lg md:text-xl lg:text-2xl opacity-0 animate-fadeInUp"
                     style={{
                       animationDuration: "1.5s",
                       animationDelay: "0.5s",
@@ -116,7 +110,6 @@ const Hero = () => {
         ))}
       </Swiper>
 
-      {/* Previous Button */}
       <button
         className="custom-prev absolute top-1/2 left-4 z-10 w-8 h-8 bg-white hover:bg-main hover:text-white text-gray-950 shadow-md rounded-full flex items-center justify-center transition"
         onClick={() => swiperRef.current?.swiper.slidePrev()}
@@ -124,7 +117,6 @@ const Hero = () => {
         <FiChevronLeft className="w-6 h-6" />
       </button>
 
-      {/* Next Button */}
       <button
         className="custom-next absolute top-1/2 right-4 z-10 w-8 h-8 bg-white  hover:bg-main hover:text-white text-gray-950 shadow-md rounded-full flex items-center justify-center transition"
         onClick={() => swiperRef.current?.swiper.slideNext()}
