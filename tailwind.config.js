@@ -51,6 +51,10 @@ module.exports = {
         },
         main: "#F69E2C",
       },
+      fontFamily: {
+        sans: ["var(--font-inter)", "sans-serif"],
+        poppins: ["var(--font-poppins)", "sans-serif"],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import { Navigation, Autoplay } from "swiper/modules";
@@ -7,6 +7,7 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const Hero = () => {
   const swiperRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const heroBanners = [
     {
@@ -46,19 +47,8 @@ const Hero = () => {
     },
   ];
 
-  const handleSlideChange = () => {
-    const activeSlide = document.querySelector(".swiper-slide-active");
-    const title = activeSlide.querySelector(".hero-title");
-    const subtitle = activeSlide.querySelector(".hero-subtitle");
-
-    if (title && subtitle) {
-      title.classList.remove("animate-fadeInUp");
-      subtitle.classList.remove("animate-fadeInUp");
-      void title.offsetWidth;
-      void subtitle.offsetWidth;
-      title.classList.add("animate-fadeInUp");
-      subtitle.classList.add("animate-fadeInUp");
-    }
+  const handleSlideChange = (swiper) => {
+    setActiveIndex(swiper.activeIndex);
   };
 
   return (
@@ -71,7 +61,7 @@ const Hero = () => {
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         onSlideChange={handleSlideChange}
       >
-        {heroBanners.map((banner) => (
+        {heroBanners.map((banner, index) => (
           <SwiperSlide key={banner._id}>
             <div
               className="relative h-[70vh] md:h-[80vh]"
@@ -84,7 +74,11 @@ const Hero = () => {
               <div className="absolute max-w-5xl mx-auto w-[90%] inset-0 flex flex-col items-center justify-center text-center text-white px-4">
                 <div className="bg-black bg-opacity-60 p-4 md:p-8 rounded-lg shadow-lg">
                   <h1
-                    className="hero-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 opacity-0 animate-fadeInUp"
+                    className={`hero-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 ${
+                      index === activeIndex
+                        ? "opacity-100 animate-fadeInUp"
+                        : "opacity-0"
+                    }`}
                     style={{
                       animationDuration: "1s",
                       animationDelay: "0.3s",
@@ -94,7 +88,11 @@ const Hero = () => {
                     {banner.title}
                   </h1>
                   <p
-                    className="hero-subtitle text-sm sm:text-lg md:text-xl lg:text-2xl opacity-0 animate-fadeInUp"
+                    className={`hero-subtitle text-sm sm:text-lg md:text-xl lg:text-2xl ${
+                      index === activeIndex
+                        ? "opacity-100 animate-fadeInUp"
+                        : "opacity-0"
+                    }`}
                     style={{
                       animationDuration: "1.5s",
                       animationDelay: "0.5s",
@@ -118,7 +116,7 @@ const Hero = () => {
       </button>
 
       <button
-        className="custom-next absolute top-1/2 right-4 z-10 w-8 h-8 bg-white  hover:bg-main hover:text-white text-gray-950 shadow-md rounded-full flex items-center justify-center transition"
+        className="custom-next absolute top-1/2 right-4 z-10 w-8 h-8 bg-white hover:bg-main hover:text-white text-gray-950 shadow-md rounded-full flex items-center justify-center transition"
         onClick={() => swiperRef.current?.swiper.slideNext()}
       >
         <FiChevronRight className="w-6 h-6" />
