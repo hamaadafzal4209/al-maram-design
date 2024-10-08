@@ -1,6 +1,13 @@
+"use client";
+
 import Image from "next/image";
-import { Facebook, Linkedin, Instagram, Twitter, Phone } from "lucide-react";
-import { SocialIcons } from "./SocialIcons";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 export default function ContactSection() {
   return (
@@ -17,18 +24,68 @@ export default function ContactSection() {
               className="mb-4"
             />
             <p className="text-gray-700 leading-relaxed">
-              Almaram Alfaneyah Contracting Co. is a certified channel partner of
-              Schneider Electric, specializing in the manufacturing of LV switchgear panels in
-              the Kingdom of Saudi Arabia. With its Head Office in Jeddah, the company aims to establish a network of branches in major cities across Saudi Arabia, operating in accordance with the highly acclaimed IEC, ISO, and ASO standards.
+              Almaram Alfaneyah Contracting Co. is a certified channel partner
+              of Schneider Electric, specializing in the manufacturing of LV
+              switchgear panels in the Kingdom of Saudi Arabia. With its Head
+              Office in Jeddah, the company aims to establish a network of
+              branches in major cities across Saudi Arabia, operating in
+              accordance with the highly acclaimed IEC, ISO, and ASO standards.
             </p>
-            <div className="">
-            <SocialIcons/>
+            <div className="flex space-x-4">
+              {/* Social Media Icons */}
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-10 h-10 text-gray-700 hover:text-blue-600 transition-colors duration-300"
+                aria-label="Facebook"
+              >
+                <FaFacebook className="text-2xl" />
+              </a>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-10 h-10 text-gray-700 hover:text-pink-600 transition-colors duration-300"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="text-2xl" />
+              </a>
+              <a
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-10 h-10 text-gray-700 hover:text-blue-500 transition-colors duration-300"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin className="text-2xl" />
+              </a>
+              <a
+                href="https://www.twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-10 h-10 text-gray-700 hover:text-blue-400 transition-colors duration-300"
+                aria-label="Twitter"
+              >
+                <FaTwitter className="text-2xl" />
+              </a>
+              <a
+                href="https://www.whatsapp.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-10 h-10 text-gray-700 hover:text-green-500 transition-colors duration-300"
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp className="text-2xl" />
+              </a>
             </div>
           </div>
 
           {/* Right side */}
           <div className="md:w-1/2 space-y-4">
-            <h2 className="text-2xl font-semibold text-main mb-2">Office Address</h2>
+            <h2 className="text-2xl font-semibold text-main mb-2">
+              Office Address
+            </h2>
             <div className="flex flex-col space-y-2 text-gray-600">
               <p className="flex items-center">
                 <span className="text-main mr-2">📍</span>
