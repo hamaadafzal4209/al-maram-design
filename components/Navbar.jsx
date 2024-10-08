@@ -20,11 +20,8 @@ export default function Navbar() {
 
   const NavItems = ({ isMobile = false }) => (
     <>
-      <NavLink href="/link1" isMobile={isMobile}>
-        Link 1
-      </NavLink>
-      <NavLink href="/link2" isMobile={isMobile}>
-        Link 2
+      <NavLink href="/" isMobile={isMobile}>
+        Home
       </NavLink>
       <DropdownMenu>
         <DropdownMenuTrigger
@@ -32,58 +29,80 @@ export default function Navbar() {
             isMobile ? "w-full justify-between" : ""
           } flex items-center px-3 py-2 text-sm font-medium rounded-md hover:bg-main hover:text-white transition-colors`}
         >
-          Dropdown 1
+          Company
           <ChevronDown className="ml-1 h-4 w-4" />
         </DropdownMenuTrigger>
         <DropdownMenuContent className="mt-2">
           <DropdownMenuItem>
-            <Link
-              href="/dropdown1/item1"
-              className="w-full text-sm hover:text-main"
-            >
-              Item 1
+            <Link href="/" className="w-full text-sm hover:text-main">
+              Quality Control
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Link
-              href="/dropdown1/item2"
-              className="w-full text-sm hover:text-main"
-            >
-              Item 2
+            <Link href="/" className="w-full text-sm hover:text-main">
+              Certification
             </Link>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
+      <NavLink href="/" isMobile={isMobile}>
+        Projects
+      </NavLink>
       <DropdownMenu>
         <DropdownMenuTrigger
           className={`${
             isMobile ? "w-full justify-between" : ""
           } flex items-center px-3 py-2 text-sm font-medium rounded-md hover:bg-main hover:text-white transition-colors`}
         >
-          Dropdown 2
+          Products
           <ChevronDown className="ml-1 h-4 w-4" />
         </DropdownMenuTrigger>
         <DropdownMenuContent className="mt-2">
-          {[...Array(8)].map((_, i) => (
-            <DropdownMenuItem key={i}>
-              <Link
-                href={`/dropdown2/item${i + 1}`}
-                className="w-full text-sm hover:text-main"
-              >
-                Item {i + 1}
-              </Link>
-            </DropdownMenuItem>
-          ))}
+          <DropdownMenuItem>
+            <Link href="/" className="w-full text-sm hover:text-main">
+              Low Voltage Switchgear
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href="/" className="w-full text-sm hover:text-main">
+              Motor Control Centers
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href="/" className="w-full text-sm hover:text-main">
+              HVAC Control Panels
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href="/" className="w-full text-sm hover:text-main">
+              Synchronizing Panels
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href="/" className="w-full text-sm hover:text-main">
+              Automatic/Manual Transfer Switch Panels
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href="/" className="w-full text-sm hover:text-main">
+              Power Factor Improvement Panels
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href="/" className="w-full text-sm hover:text-main">
+              Cables and Bus Bar Trunking
+            </Link>
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-      <NavLink href="/link3" isMobile={isMobile}>
-        Link 3
+      <NavLink href="/" isMobile={isMobile}>
+        Services
       </NavLink>
-      <NavLink href="/link4" isMobile={isMobile}>
-        Link 4
+      <NavLink href="/" isMobile={isMobile}>
+        About Us
       </NavLink>
-      <NavLink href="/link5" isMobile={isMobile}>
-        Link 5
+      <NavLink href="/" isMobile={isMobile}>
+        Contact Us
       </NavLink>
     </>
   );
@@ -102,7 +121,7 @@ export default function Navbar() {
             />
           </Link>
         </div>
-        <div className="hidden md:flex md:items-center md:space-x-4">
+        <div className="hidden md:flex md:items-center md:space-x-4 capitalize font-semibold">
           <NavItems />
         </div>
         <div className="md:hidden">
