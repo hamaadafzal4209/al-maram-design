@@ -151,7 +151,7 @@ export default function VoltageElectricitySlider() {
         }}
         className="w-full"
       >
-        <CarouselContent className="-ml-2 md:-ml-3">
+        <CarouselContent className="-ml-2 md:-ml-3 md:mr-2">
           {cardData.map((card) => (
             <CarouselItem
               key={card.id}

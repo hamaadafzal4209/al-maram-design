@@ -1,4 +1,5 @@
 import WhoWeAre from "@/components/AboutUs";
+import MarketPartners from "@/components/Branding";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import VoltageElectricitySlider from "@/components/Products";
@@ -17,6 +18,7 @@ const page = () => {
       <Service />
       <Stats />
       <WhatWeDoSpecialists/>
+      <MarketPartners/>
     </div>
   );
 };
