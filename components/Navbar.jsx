@@ -81,7 +81,7 @@ export default function Navbar() {
 
   return (
     <nav className="border-b bg-white shadow-sm">
-      <div className="flex items-center justify-between px-4 py-3 lg:px-8">
+      <div className="flex items-center justify-between px-4 py-3 lg:px-12 xl:px-20">
         <div className="flex items-center">
           <Link href="/" className="text-2xl font-bold">
             <Image

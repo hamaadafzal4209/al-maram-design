@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React from "react";
 
-const WhoWeAre = () => {
+const Service = () => {
   return (
     <section className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-20">
@@ -12,16 +12,12 @@ const WhoWeAre = () => {
           <div className="space-y-6">
             <div>
               <h3 className="text-2xl pb-4 font-semibold text-gray-800">
-                Who Are We
+                OUR SALES AND TECHNICAL SERVICES
               </h3>
               <p className="text-lg text-gray-600">
-                Almaram Alfaneyah Contracting Co. is a certified channel partner
-                of Schneider Electric, dealing in the manufacturing of LV
-                switchgear panels in the Kingdom of Saudi Arabia. The Head
-                Office being in Jeddah, the company looks forward to a complete
-                network of its branches in major cities of Saudi Arabia. The
-                company is operating in accordance with the highly acclaimed
-                IEC, ISO, and ASO standards.
+                Our services are designed to support our clients throughout the
+                life cycle of the project. We are a full service partner who
+                will take responsibility for all of the project activities.
               </p>
             </div>
           </div>
@@ -43,4 +39,4 @@ const WhoWeAre = () => {
   );
 };
 
-export default WhoWeAre;
+export default Service;
