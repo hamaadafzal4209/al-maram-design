@@ -7,6 +7,8 @@ import {
   FaLinkedin,
   FaTwitter,
   FaWhatsapp,
+  FaMapMarkerAlt, // Import for location
+  FaPhoneAlt, // Import for phone contact
 } from "react-icons/fa";
 import {
   Tooltip,
@@ -121,11 +123,11 @@ export default function ContactSection() {
             </h2>
             <div className="flex flex-col space-y-2 text-gray-600">
               <p className="flex items-center">
-                <span className="text-main mr-2">📍</span>
+                <FaMapMarkerAlt className="text-main mr-2" />{" "}
                 <span>Location: 108930, Jeddah 21351, K.S.A</span>
               </p>
               <p className="flex items-center">
-                <span className="text-main mr-2">📞</span>
+                <FaPhoneAlt className="text-main mr-2" />
                 <span>Call Us: +966 56 910 5617</span>
               </p>
             </div>

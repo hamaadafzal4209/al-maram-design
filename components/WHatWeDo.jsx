@@ -72,8 +72,8 @@ export default function WhatWeDoSpecialists() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {specializations.map((spec, index) => (
             <Card
-              key={index}
-              className="overflow-hidden transition-all hover:shadow-md"
+              key={index}   
+              className="overflow-hidden hover:shadow-md hover:-translate-y-2 transition-all duration-300"
             >
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4">

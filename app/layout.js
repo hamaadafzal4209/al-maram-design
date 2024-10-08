@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={cn(
-        "min-h-screen bg-dark-300 font-sans antialiased bg-gradient-to-b from-gray-50 to-white",
+        "min-h-screen bg-dark-300 font-sans antialiased bg-gradient-to-b from-gray-100 via-gray-50 to-white",
         inter.variable,
         poppins.variable
       )}
