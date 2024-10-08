@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import VoltageElectricitySlider from "@/components/Products";
 import Service from "@/components/Services";
 import Stats from "@/components/Stats";
+import WhatWeDoSpecialists from "@/components/WHatWeDo";
 import React from "react";
 
 const page = () => {
@@ -15,6 +16,7 @@ const page = () => {
       <VoltageElectricitySlider />
       <Service />
       <Stats />
+      <WhatWeDoSpecialists/>
     </div>
   );
 };

@@ -21,21 +21,17 @@ export const metadata = {
     "Discover the best products at unbeatable prices with Sellify, your go-to eCommerce platform.",
 };
 
-export default function RootLayout({
-  children,
-}) {
+export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
       className={cn(
-        "min-h-screen bg-dark-300 font-sans antialiased ",
+        "min-h-screen bg-dark-300 font-sans antialiased bg-gradient-to-b from-gray-50 to-white",
         inter.variable,
         poppins.variable
       )}
     >
-      <body className="font-poppins">
-          {children}
-      </body>
+      <body className="font-poppins">{children}</body>
     </html>
   );
 }
