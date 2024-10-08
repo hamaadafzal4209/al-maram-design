@@ -50,7 +50,7 @@ const specializations = [
 
 export default function WhatWeDoSpecialists() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-20">
         <div className="text-center mb-16">
           <Badge
@@ -79,7 +79,7 @@ export default function WhatWeDoSpecialists() {
                 <div className="flex items-center space-x-4">
                   <div className="flex-shrink-0">
                     <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-main">
-                      <spec.icon className="h-6 w-6" />
+                      <spec.icon className="h-8 w-8" />
                     </div>
                   </div>
                   <div className="flex-1 min-w-0">
