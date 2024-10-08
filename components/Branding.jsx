@@ -21,32 +21,22 @@ const partners = [
 ];
 
 export default function InfiniteLoopMarketPartners() {
-  const logoTrackRef1 = useRef(null);
-  const logoTrackRef2 = useRef(null);
-  const xRef1 = useRef(0);
-  const xRef2 = useRef(0);
+  const logoTrackRef = useRef(null);
+  const xRef = useRef(0);
   const SPEED = 1;
 
   const getTrackWidth = (trackRef) => (trackRef.current ? trackRef.current.scrollWidth / 2 : 0);
 
   useAnimationFrame(() => {
-    if (!logoTrackRef1.current || !logoTrackRef2.current) return;
+    if (!logoTrackRef.current) return;
 
-    // Animate first track (right to left)
-    xRef1.current -= SPEED;
-    const logoWidth1 = getTrackWidth(logoTrackRef1);
-    if (xRef1.current <= -logoWidth1) {
-      xRef1.current += logoWidth1; // Wrap around
+    // Animate track (right to left)
+    xRef.current -= SPEED;
+    const logoWidth = getTrackWidth(logoTrackRef);
+    if (xRef.current <= -logoWidth) {
+      xRef.current += logoWidth; // Wrap around
     }
-    logoTrackRef1.current.style.transform = `translateX(${xRef1.current}px)`;
-
-    // Animate second track (left to right)
-    xRef2.current += SPEED;
-    const logoWidth2 = getTrackWidth(logoTrackRef2);
-    if (xRef2.current >= logoWidth2) {
-      xRef2.current -= logoWidth2; // Wrap around
-    }
-    logoTrackRef2.current.style.transform = `translateX(${xRef2.current}px)`;
+    logoTrackRef.current.style.transform = `translateX(${xRef.current}px)`;
   });
 
   return (
@@ -61,39 +51,13 @@ export default function InfiniteLoopMarketPartners() {
           </p>
         </div>
         <div className="relative">
-          {/* First track - right to left */}
+          {/* Single track - right to left */}
           <div className="relative mb-8">
             <div className="absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-white to-transparent z-10" />
             <div className="absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-white to-transparent z-10" />
             <div className="overflow-hidden">
               <div
-                ref={logoTrackRef1}
-                className="flex space-x-12 whitespace-nowrap"
-                style={{ willChange: "transform" }}
-              >
-                {/* Duplicate partners for seamless scrolling */}
-                {[...partners, ...partners].map((partner, index) => (
-                  <div key={index} className="flex-shrink-0 flex flex-col items-center">
-                    <Image
-                      width={500}
-                      height={500}
-                      src={partner.logo}
-                      alt={`${partner.name} logo`}
-                      className="w-36 object-contain"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Second track - left to right */}
-          <div className="relative">
-            <div className="absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-white to-transparent z-10" />
-            <div className="absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-white to-transparent z-10" />
-            <div className="overflow-hidden">
-              <div
-                ref={logoTrackRef2}
+                ref={logoTrackRef}
                 className="flex space-x-12 whitespace-nowrap"
                 style={{ willChange: "transform" }}
               >
