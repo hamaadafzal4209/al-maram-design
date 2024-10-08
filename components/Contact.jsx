@@ -8,6 +8,12 @@ import {
   FaTwitter,
   FaWhatsapp,
 } from "react-icons/fa";
+import {
+  Tooltip,
+  TooltipProvider,
+  TooltipTrigger,
+  TooltipContent,
+} from "./ui/tooltip";
 
 export default function ContactSection() {
   return (
@@ -32,52 +38,79 @@ export default function ContactSection() {
               accordance with the highly acclaimed IEC, ISO, and ASO standards.
             </p>
             <div className="flex space-x-4">
-              {/* Social Media Icons */}
-              <a
-                href="https://www.facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-10 h-10 text-gray-700 hover:text-blue-600 transition-colors duration-300"
-                aria-label="Facebook"
-              >
-                <FaFacebook className="text-2xl" />
-              </a>
-              <a
-                href="https://www.instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-10 h-10 text-gray-700 hover:text-pink-600 transition-colors duration-300"
-                aria-label="Instagram"
-              >
-                <FaInstagram className="text-2xl" />
-              </a>
-              <a
-                href="https://www.linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-10 h-10 text-gray-700 hover:text-blue-500 transition-colors duration-300"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedin className="text-2xl" />
-              </a>
-              <a
-                href="https://www.twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-10 h-10 text-gray-700 hover:text-blue-400 transition-colors duration-300"
-                aria-label="Twitter"
-              >
-                <FaTwitter className="text-2xl" />
-              </a>
-              <a
-                href="https://www.whatsapp.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-10 h-10 text-gray-700 hover:text-green-500 transition-colors duration-300"
-                aria-label="WhatsApp"
-              >
-                <FaWhatsapp className="text-2xl" />
-              </a>
+              <TooltipProvider>
+                {/* Social Media Icons with Tooltips */}
+                <Tooltip side="top" align="center">
+                  <TooltipTrigger>
+                    <a
+                      href="https://www.facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-10 h-10 text-gray-700 hover:text-blue-600 transition-colors duration-300"
+                      aria-label="Facebook"
+                    >
+                      <FaFacebook className="text-2xl" />
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>Facebook</TooltipContent>
+                </Tooltip>
+                <Tooltip side="top" align="center">
+                  <TooltipTrigger>
+                    <a
+                      href="https://www.instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-10 h-10 text-gray-700 hover:text-pink-600 transition-colors duration-300"
+                      aria-label="Instagram"
+                    >
+                      <FaInstagram className="text-2xl" />
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>Instagram</TooltipContent>
+                </Tooltip>
+                <Tooltip side="top" align="center">
+                  <TooltipTrigger>
+                    <a
+                      href="https://www.linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-10 h-10 text-gray-700 hover:text-blue-500 transition-colors duration-300"
+                      aria-label="LinkedIn"
+                    >
+                      <FaLinkedin className="text-2xl" />
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>LinkedIn</TooltipContent>
+                </Tooltip>
+                <Tooltip side="top" align="center">
+                  <TooltipTrigger>
+                    <a
+                      href="https://www.twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-10 h-10 text-gray-700 hover:text-blue-400 transition-colors duration-300"
+                      aria-label="Twitter"
+                    >
+                      <FaTwitter className="text-2xl" />
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>Twitter</TooltipContent>
+                </Tooltip>
+                <Tooltip side="top" align="center">
+                  <TooltipTrigger>
+                    <a
+                      href="https://www.whatsapp.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-10 h-10 text-gray-700 hover:text-green-500 transition-colors duration-300"
+                      aria-label="WhatsApp"
+                    >
+                      <FaWhatsapp className="text-2xl" />
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>WhatsApp</TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </div>
           </div>
 
