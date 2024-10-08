@@ -1,110 +1,109 @@
 "use client";
+
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import React from "react";
-import { motion, useInView } from "framer-motion";
 
-const Stats = () => {
-  const statsData = [
-    {
-      id: 1,
-      imageUrl: "/assets/icon1.png",
-      label: "Happy Customers",
-      count: 1789,
-    },
-    {
-      id: 2,
-      imageUrl: "/assets/icon2.png",
-      label: "Delivered Projects",
-      count: 647,
-    },
-    {
-      id: 3,
-      imageUrl: "/assets/icon3.png",
-      label: "Projects Done",
-      count: 4000,
-    },
-    {
-      id: 4,
-      imageUrl: "/assets/icon4.png",
-      label: "Cup of Coffee",
-      count: 44,
-    },
-  ];
+const statsData = [
+  {
+    id: 1,
+    imageUrl: "/assets/icon1.png",
+    label: "Happy Customers",
+    count: 1789,
+  },
+  {
+    id: 2,
+    imageUrl: "/assets/icon2.png",
+    label: "Delivered Projects",
+    count: 647,
+  },
+  {
+    id: 3,
+    imageUrl: "/assets/icon3.png",
+    label: "Projects Done",
+    count: 4000,
+  },
+  {
+    id: 4,
+    imageUrl: "/assets/icon4.png",
+    label: "Cup of Coffee",
+    count: 44,
+  },
+];
 
-  return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {statsData.map((stat) => (
-            <StatCard key={stat.id} stat={stat} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
+const useCountUp = (end, duration = 2000, trigger) => {
+  const [count, setCount] = useState(0);
 
-const useCounter = (target, isInView) => {
-  const [count, setCount] = React.useState(0);
+  useEffect(() => {
+    if (!trigger) return;
 
-  React.useEffect(() => {
-    if (!isInView) return; // Exit early if not in view
-
-    const startCount = () => {
-      setCount(0); // Reset the count to 0
-      const duration = 1000; // Duration of the counting animation
-      const increment = Math.ceil(target / (duration / 100)); // Calculate the increment step based on duration
-
-      const interval = setInterval(() => {
-        setCount((prev) => {
-          if (prev + increment >= target) {
-            clearInterval(interval);
-            return target; // Stop when target is reached
-          }
-          return prev + increment;
-        });
-      }, 100); // Update every 100ms
-
-      return () => clearInterval(interval); // Cleanup on unmount
+    let startTime = null;
+    const animateCount = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      setCount(Math.floor(progress * end));
+      if (progress < 1) {
+        requestAnimationFrame(animateCount);
+      }
     };
-
-    startCount();
-  }, [target, isInView]);
+    requestAnimationFrame(animateCount);
+  }, [end, duration, trigger]);
 
   return count;
 };
 
-const StatCard = ({ stat }) => {
-  const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: true }); // Trigger animation once when in view
-  const count = useCounter(stat.count, isInView); // Use counter only if in view
+const StatItem = ({ imageUrl, label, count }) => {
+  const ref = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const animatedCount = useCountUp(count, 2000, inView);
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5 }}
-      className="flex flex-col items-center p-6 bg-white rounded-lg shadow-lg"
-    >
-      <Image
-        width={80}
-        height={80}
-        src={stat.imageUrl}
-        alt={stat.label}
-        className="mb-4"
-      />
-      <motion.div
-        className="text-4xl font-bold text-gray-800"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={isInView ? { opacity: 1, scale: 1 } : {}}
-        transition={{ duration: 0.5 }}
-      >
-        {count}
-      </motion.div>
-      <div className="text-lg text-gray-600">{stat.label}</div>
-    </motion.div>
+    <div ref={ref} className="flex flex-col items-center p-4">
+      <div className="mb-4">
+        <Image src={imageUrl} alt={label} width={64} height={64} />
+      </div>
+      <div className="text-4xl font-bold mb-2">{animatedCount}</div>
+      <div className="text-lg text-gray-600">{label}</div>
+    </div>
   );
 };
 
-export default Stats;
+export default function Stats() {
+  return (
+    <div className="bg-white py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            Our Stats
+          </h2>
+          <p className="mt-4 text-xl text-gray-600">
+            Take a look at our impressive numbers
+          </p>
+        </div>
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {statsData.map((stat) => (
+            <StatItem key={stat.id} {...stat} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
