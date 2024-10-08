@@ -1,5 +1,6 @@
 import WhoWeAre from "@/components/AboutUs";
 import ContactSection from "@/components/Contact";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import VoltageElectricitySlider from "@/components/Products";
@@ -21,6 +22,7 @@ const page = () => {
       <WhatWeDoSpecialists/>
       <Sponser/>
       <ContactSection/>
+      <Footer/>
     </div>
   );
 };
