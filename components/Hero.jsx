@@ -80,8 +80,10 @@ const Hero = () => {
                         : "opacity-0"
                     }`}
                     style={{
-                      animationDuration: "1s",
-                      animationDelay: "0.3s",
+                      animationDuration: "0.8s",
+                      animationDelay: `${
+                        index === activeIndex ? "0.2s" : "0s"
+                      }`,
                       animationFillMode: "forwards",
                     }}
                   >
@@ -90,12 +92,14 @@ const Hero = () => {
                   <p
                     className={`hero-subtitle text-sm sm:text-lg md:text-xl lg:text-2xl ${
                       index === activeIndex
-                        ? "opacity-100 animate-fadeInUp"
+                        ? "opacity-100 animate-fadeIn"
                         : "opacity-0"
                     }`}
                     style={{
-                      animationDuration: "1.5s",
-                      animationDelay: "0.5s",
+                      animationDuration: "0.8s",
+                      animationDelay: `${
+                        index === activeIndex ? "0.4s" : "0s"
+                      }`,
                       animationFillMode: "forwards",
                     }}
                   >
