@@ -52,12 +52,12 @@ export default function Navbar() {
         <DropdownMenuTrigger
           className={`${
             isMobile ? "w-full justify-between" : ""
-          } flex items-center px-3 py-2 text-sm font-semibold rounded-md hover:text-main transition-colors`}
+          }  flex items-center px-3 py-2 text-sm font-semibold rounded-md hover:text-main transition-colors`}
         >
           Products
           <ChevronDown className="ml-1 h-4 w-4" />
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="mt-2">
+        <DropdownMenuContent className="mt-2 max-w-52 w-full">
           <DropdownMenuItem>
             <Link href="/" className="w-full text-sm hover:text-main">
               Low Voltage Switchgear
