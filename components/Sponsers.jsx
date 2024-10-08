@@ -47,7 +47,6 @@ export function Sponser() {
           excellence.
         </p>
       </div>
-      {/* Marquee components without margin or padding */}
       <Marquee pauseOnHover className="[--duration:20s] !mb-0">
         {firstRow.map((partner) => (
           <PartnerCard key={partner.name} {...partner} />
