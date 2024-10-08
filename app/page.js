@@ -1,4 +1,5 @@
 import WhoWeAre from "@/components/AboutUs";
+import ContactSection from "@/components/Contact";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import VoltageElectricitySlider from "@/components/Products";
@@ -19,6 +20,7 @@ const page = () => {
       <Stats />
       <WhatWeDoSpecialists/>
       <Sponser/>
+      <ContactSection/>
     </div>
   );
 };
