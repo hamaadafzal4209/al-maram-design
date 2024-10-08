@@ -27,7 +27,7 @@ export default function Navbar() {
         <DropdownMenuTrigger
           className={`${
             isMobile ? "w-full justify-between" : ""
-          } flex items-center px-3 py-2 text-sm font-medium rounded-md hover:bg-main hover:text-white transition-colors`}
+          } flex items-center px-3 py-2 text-sm font-semibold rounded-md hover:text-main transition-colors`}
         >
           Company
           <ChevronDown className="ml-1 h-4 w-4" />
@@ -52,7 +52,7 @@ export default function Navbar() {
         <DropdownMenuTrigger
           className={`${
             isMobile ? "w-full justify-between" : ""
-          } flex items-center px-3 py-2 text-sm font-medium rounded-md hover:bg-main hover:text-white transition-colors`}
+          } flex items-center px-3 py-2 text-sm font-semibold rounded-md hover:text-main transition-colors`}
         >
           Products
           <ChevronDown className="ml-1 h-4 w-4" />
@@ -149,7 +149,7 @@ const NavLink = ({ href, children, isMobile }) => (
     href={href}
     className={`${
       isMobile ? "w-full" : ""
-    } flex items-center px-4 py-2 text-sm font-semibold rounded-md hover:bg-main hover:text-white transition duration-200`}
+    } flex items-center px-4 py-2 text-sm font-semibold rounded-md hover:text-main transition duration-200`}
   >
     {children}
   </Link>
