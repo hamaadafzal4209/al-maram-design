@@ -37,12 +37,18 @@ export default function Navbar() {
         </DropdownMenuTrigger>
         <DropdownMenuContent className="mt-2">
           <DropdownMenuItem>
-            <Link href="/dropdown1/item1" className="w-full text-sm hover:text-main">
+            <Link
+              href="/dropdown1/item1"
+              className="w-full text-sm hover:text-main"
+            >
               Item 1
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Link href="/dropdown1/item2" className="w-full text-sm hover:text-main">
+            <Link
+              href="/dropdown1/item2"
+              className="w-full text-sm hover:text-main"
+            >
               Item 2
             </Link>
           </DropdownMenuItem>
@@ -60,7 +66,10 @@ export default function Navbar() {
         <DropdownMenuContent className="mt-2">
           {[...Array(8)].map((_, i) => (
             <DropdownMenuItem key={i}>
-              <Link href={`/dropdown2/item${i + 1}`} className="w-full text-sm hover:text-main">
+              <Link
+                href={`/dropdown2/item${i + 1}`}
+                className="w-full text-sm hover:text-main"
+              >
                 Item {i + 1}
               </Link>
             </DropdownMenuItem>
@@ -85,11 +94,11 @@ export default function Navbar() {
         <div className="flex items-center">
           <Link href="/" className="text-2xl font-bold">
             <Image
-              width={160}
-              height={160}
+              width={1000}
+              height={1000}
               src={"/assets/logo.png"}
               alt="Logo"
-              className="w-16"
+              className="w-36"
             />
           </Link>
         </div>
