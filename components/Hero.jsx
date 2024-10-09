@@ -61,7 +61,7 @@ const Hero = () => {
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         onSlideChange={handleSlideChange}
       >
-        {heroBanners.map((banner, index) => (
+        {heroBanners.map((banner) => (
           <SwiperSlide key={banner._id}>
             <div
               className="relative h-[70vh] md:h-[80vh]"
@@ -70,20 +70,30 @@ const Hero = () => {
                 backgroundSize: "cover",
               }}
             >
+              {/* Dark overlay for better text readability */}
+              <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+              {/* Centered Text Content */}
+              <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
+                <h2 className="text-3xl md:text-5xl font-bold mb-4">
+                  {banner.title}
+                </h2>
+                <p className="text-sm md:text-lg max-w-xl">{banner.subtitle}</p>
+              </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
       <button
-        className="custom-prev absolute top-1/2 left-4 z-10 w-8 h-8 bg-white hover:bg-main hover:text-white text-gray-950 shadow-md rounded-full flex items-center justify-center transition"
+        className="custom-prev absolute top-1/2 left-4 z-10 w-10 h-10 bg-white hover:bg-main hover:text-white text-gray-950 shadow-lg rounded-full flex items-center justify-center transition-all transform -translate-y-1/2"
         onClick={() => swiperRef.current?.swiper.slidePrev()}
       >
         <FiChevronLeft className="w-6 h-6" />
       </button>
 
       <button
-        className="custom-next absolute top-1/2 right-4 z-10 w-8 h-8 bg-white hover:bg-main hover:text-white text-gray-950 shadow-md rounded-full flex items-center justify-center transition"
+        className="custom-next absolute top-1/2 right-4 z-10 w-10 h-10 bg-white hover:bg-main hover:text-white text-gray-950 shadow-lg rounded-full flex items-center justify-center transition-all transform -translate-y-1/2"
         onClick={() => swiperRef.current?.swiper.slideNext()}
       >
         <FiChevronRight className="w-6 h-6" />
