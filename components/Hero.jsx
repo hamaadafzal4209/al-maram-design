@@ -76,7 +76,7 @@ const Hero = () => {
                   <h1
                     className={`hero-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 ${
                       index === activeIndex
-                        ? "opacity-100 animate-fadeInUp"
+                        ? "opacity-100"
                         : "opacity-0"
                     }`}
                     style={{
@@ -92,7 +92,7 @@ const Hero = () => {
                   <p
                     className={`hero-subtitle text-sm sm:text-lg md:text-xl lg:text-2xl ${
                       index === activeIndex
-                        ? "opacity-100 animate-fadeIn"
+                        ? "opacity-100"
                         : "opacity-0"
                     }`}
                     style={{
