@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import VoltageElectricitySlider from "@/components/Products";
+import ScrollToTop from "@/components/ScrollToTop";
 import Service from "@/components/Services";
 import { Sponser } from "@/components/Sponsers";
 import Stats from "@/components/Stats";
@@ -23,6 +24,7 @@ const page = () => {
       <Sponser/>
       <ContactSection/>
       <Footer/>
+      <ScrollToTop/>
     </div>
   );
 };
