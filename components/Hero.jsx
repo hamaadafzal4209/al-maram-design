@@ -75,7 +75,7 @@ const Hero = () => {
 
               {/* Centered Text Content */}
               <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
-                <h2 className="text-3xl md:text-5xl font-bold mb-4">
+                <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center max-w-4xl">
                   {banner.title}
                 </h2>
                 <p className="text-sm md:text-lg max-w-xl">{banner.subtitle}</p>
