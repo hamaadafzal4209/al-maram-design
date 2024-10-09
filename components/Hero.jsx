@@ -70,43 +70,6 @@ const Hero = () => {
                 backgroundSize: "cover",
               }}
             >
-              <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-              <div className="absolute max-w-5xl mx-auto w-[90%] inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-                <div className="bg-black bg-opacity-60 p-4 md:p-8 rounded-lg shadow-lg">
-                  <h1
-                    className={`hero-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 ${
-                      index === activeIndex
-                        ? "opacity-100"
-                        : "opacity-0"
-                    }`}
-                    style={{
-                      animationDuration: "0.8s",
-                      animationDelay: `${
-                        index === activeIndex ? "0.2s" : "0s"
-                      }`,
-                      animationFillMode: "forwards",
-                    }}
-                  >
-                    {banner.title}
-                  </h1>
-                  <p
-                    className={`hero-subtitle text-sm sm:text-lg md:text-xl lg:text-2xl ${
-                      index === activeIndex
-                        ? "opacity-100"
-                        : "opacity-0"
-                    }`}
-                    style={{
-                      animationDuration: "0.8s",
-                      animationDelay: `${
-                        index === activeIndex ? "0.4s" : "0s"
-                      }`,
-                      animationFillMode: "forwards",
-                    }}
-                  >
-                    {banner.subtitle}
-                  </p>
-                </div>
-              </div>
             </div>
           </SwiperSlide>
         ))}

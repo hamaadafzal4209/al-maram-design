@@ -49,7 +49,7 @@ export default function TeamMember() {
           {teamMembers.map((member, index) => (
             <Card
               key={index}
-              className="overflow-hidden hover:shadow-lg transition-shadow duration-300 bg-white rounded-lg"
+              className="overflow-hidden hover:shadow-md hover:-translate-y-2 transition-all duration-300"
             >
               <CardContent className="p-0">
                 <Image
