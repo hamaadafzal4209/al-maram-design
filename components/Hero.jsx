@@ -78,7 +78,7 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="text-3xl md:text-5xl px-6 font-bold mb-4 max-w-2xl w-11/12 mx-auto"
+                  className="text-3xl md:text-5xl sm:px-6 font-bold mb-4 sm:max-w-2xl sm:w-full w-11/12 mx-auto"
                 >
                   {banner.title}
                 </motion.h2>
