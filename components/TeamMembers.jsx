@@ -52,20 +52,21 @@ export default function TeamMember() {
               className="overflow-hidden hover:shadow-lg hover:-translate-y-2 transition-transform duration-300 relative"
             >
               <CardContent className="p-0 relative group">
-                <Image
-                  width={1000}
-                  height={1000}
-                  src={member.imageUrl}
-                  alt={member.name}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+                <div className="overflow-hidden">
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={member.imageUrl}
+                    alt={member.name}
+                    className="w-full h-48 object-cover transition-transform duration-500 ease-in-out group-hover:scale-125"
+                  />
+                </div>
                 <div className="p-4 bg-white relative z-10">
                   <h3 className="font-semibold text-lg mb-1 text-main">
                     {member.name}
                   </h3>
                   <p className="text-sm text-gray-600">{member.role}</p>
                 </div>
-                {/* Hover overlay */}
                 <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-0">
                   <p className="text-white text-lg font-semibold">
                     {member.role}
