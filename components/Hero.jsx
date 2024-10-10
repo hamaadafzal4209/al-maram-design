@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import { Navigation, Autoplay } from "swiper/modules";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const swiperRef = useRef(null);
@@ -64,36 +65,48 @@ const Hero = () => {
         {heroBanners.map((banner) => (
           <SwiperSlide key={banner._id}>
             <div
-              className="relative h-[70vh] md:h-[80vh]"
+              className="relative h-[70vh] md:h-[80vh] flex items-center justify-center"
               style={{
                 background: `url(${banner.imageUrls[0]}) no-repeat center`,
                 backgroundSize: "cover",
               }}
             >
-              {/* Dark overlay for better text readability */}
               <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-              {/* Centered Text Content */}
-              <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
-                <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center max-w-4xl">
+              <div className="relative z-10 flex flex-col justify-center items-center text-center text-white p-4">
+                <motion.h2
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="text-3xl md:text-5xl font-bold mb-4 max-w-2xl"
+                >
                   {banner.title}
-                </h2>
-                <p className="text-sm md:text-lg max-w-xl">{banner.subtitle}</p>
+                </motion.h2>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  className="text-sm md:text-lg max-w-xl"
+                >
+                  {banner.subtitle}
+                </motion.p>
               </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
+      {/* Removed indicator section */}
+
       <button
-        className="custom-prev absolute top-1/2 left-4 z-10 w-10 h-10 bg-white hover:bg-main hover:text-white text-gray-950 shadow-lg rounded-full flex items-center justify-center transition-all transform -translate-y-1/2"
+        className="custom-prev absolute top-1/2 left-4 z-20 w-10 h-10 bg-white hover:bg-main hover:text-white text-gray-950 shadow-lg rounded-full flex items-center justify-center transition-all transform -translate-y-1/2"
         onClick={() => swiperRef.current?.swiper.slidePrev()}
       >
         <FiChevronLeft className="w-6 h-6" />
       </button>
 
       <button
-        className="custom-next absolute top-1/2 right-4 z-10 w-10 h-10 bg-white hover:bg-main hover:text-white text-gray-950 shadow-lg rounded-full flex items-center justify-center transition-all transform -translate-y-1/2"
+        className="custom-next absolute top-1/2 right-4 z-20 w-10 h-10 bg-white hover:bg-main hover:text-white text-gray-950 shadow-lg rounded-full flex items-center justify-center transition-all transform -translate-y-1/2"
         onClick={() => swiperRef.current?.swiper.slideNext()}
       >
         <FiChevronRight className="w-6 h-6" />
