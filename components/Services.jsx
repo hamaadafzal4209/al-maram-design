@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import { Fade, Zoom } from "react-awesome-reveal";
 
 const Service = () => {
   return (
@@ -9,7 +10,7 @@ const Service = () => {
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           {/* Left: Description */}
-          <div className="space-y-6">
+          <Fade direction="left" triggerOnce className="space-y-6">
             <div>
               <h3 className="text-2xl pb-4 font-semibold text-gray-800">
                 OUR SALES AND TECHNICAL SERVICES
@@ -20,19 +21,21 @@ const Service = () => {
                 will take responsibility for all of the project activities.
               </p>
             </div>
-          </div>
+          </Fade>
 
           {/* Right: Image */}
-          <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-lg">
-            <Image
-              width={1000}
-              height={1000}
-              src="/assets/about.jpg"
-              alt="Who We Are"
-              className="h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center"></div>
-          </div>
+          <Zoom triggerOnce>
+            <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-lg">
+              <Image
+                width={1000}
+                height={1000}
+                src="/assets/about.jpg"
+                alt="Who We Are"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center"></div>
+            </div>
+          </Zoom>
         </div>
       </div>
     </section>

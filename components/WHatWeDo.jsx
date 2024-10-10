@@ -1,3 +1,5 @@
+"use client";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -8,6 +10,7 @@ import {
   TruckIcon,
   ShieldCheckIcon,
 } from "lucide-react";
+import { Fade } from "react-awesome-reveal";
 
 const specializations = [
   {
@@ -69,32 +72,36 @@ export default function WhatWeDoSpecialists() {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {specializations.map((spec, index) => (
-            <Card
-              key={index}   
-              className="overflow-hidden hover:shadow-md hover:-translate-y-2 transition-all duration-300"
-            >
-              <CardContent className="p-6">
-                <div className="flex items-center space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-main">
-                      <spec.icon className="h-8 w-8" />
+        <Fade>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {specializations.map((spec, index) => (
+              <Fade key={index} delay={index * 100}>
+                <Card
+                  key={index}
+                  className="overflow-hidden hover:shadow-md hover:-translate-y-2 transition-all duration-300"
+                >
+                  <CardContent className="p-6">
+                    <div className="flex items-center space-x-4">
+                      <div className="flex-shrink-0">
+                        <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-main">
+                          <spec.icon className="h-8 w-8" />
+                        </div>
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-lg font-semibold text-gray-900 truncate">
+                          {spec.title}
+                        </h3>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-lg font-semibold text-gray-900 truncate">
-                      {spec.title}
-                    </h3>
-                  </div>
-                </div>
-                <p className="mt-4 text-base text-gray-500">
-                  {spec.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                    <p className="mt-4 text-base text-gray-500">
+                      {spec.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </Fade>
+            ))}
+          </div>
+        </Fade>
       </div>
     </section>
   );
