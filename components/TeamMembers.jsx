@@ -1,5 +1,8 @@
+"use client";
+
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import { Fade } from "react-awesome-reveal";
 
 const teamMembers = [
   {
@@ -45,37 +48,41 @@ export default function TeamMember() {
     <section className="py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-20">
         <h2 className="text-3xl font-bold text-center mb-8">Our Team</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {teamMembers.map((member, index) => (
-            <Card
-              key={index}
-              className="overflow-hidden hover:shadow-lg hover:-translate-y-2 transition-transform duration-300 relative"
-            >
-              <CardContent className="p-0 relative group">
-                <div className="overflow-hidden">
-                  <Image
-                    width={1000}
-                    height={1000}
-                    src={member.imageUrl}
-                    alt={member.name}
-                    className="w-full h-48 object-cover transition-transform duration-500 ease-in-out group-hover:scale-125"
-                  />
-                </div>
-                <div className="p-4 bg-white relative z-10">
-                  <h3 className="font-semibold text-lg mb-1 text-main">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm text-gray-600">{member.role}</p>
-                </div>
-                <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-0">
-                  <p className="text-white text-lg font-semibold">
-                    {member.role}
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        <Fade>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {teamMembers.map((member, index) => (
+              <Fade key={index} delay={index * 100}>
+                <Card
+                  key={index}
+                  className="overflow-hidden hover:shadow-lg hover:-translate-y-2 transition-transform duration-300 relative"
+                >
+                  <CardContent className="p-0 relative group">
+                    <div className="overflow-hidden">
+                      <Image
+                        width={1000}
+                        height={1000}
+                        src={member.imageUrl}
+                        alt={member.name}
+                        className="w-full h-48 object-cover transition-transform duration-500 ease-in-out group-hover:scale-125"
+                      />
+                    </div>
+                    <div className="p-4 bg-white relative z-10">
+                      <h3 className="font-semibold text-lg mb-1 text-main">
+                        {member.name}
+                      </h3>
+                      <p className="text-sm text-gray-600">{member.role}</p>
+                    </div>
+                    <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-0">
+                      <p className="text-white text-lg font-semibold">
+                        {member.role}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Fade>
+            ))}
+          </div>
+        </Fade>
       </div>
     </section>
   );
