@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
         poppins.variable
       )}
     >
-      <body className="font-poppins">{children}</body>
+      <body className="font-poppins overflow-x-hidden">{children}</body>
     </html>
   );
 }

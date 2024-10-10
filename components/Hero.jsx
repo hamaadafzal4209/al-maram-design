@@ -73,12 +73,12 @@ const Hero = () => {
             >
               <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-              <div className="relative z-10 flex flex-col justify-center items-center text-center text-white p-4">
+              <div className="relative z-10 px-4 flex flex-col justify-center items-center text-center text-white p-4">
                 <motion.h2
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="text-3xl md:text-5xl font-bold mb-4 max-w-2xl"
+                  className="text-3xl md:text-5xl px-6 font-bold mb-4 max-w-2xl w-11/12 mx-auto"
                 >
                   {banner.title}
                 </motion.h2>
@@ -86,7 +86,7 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className="text-sm md:text-lg max-w-xl"
+                  className="text-sm md:text-lg max-w-xl w-11/12 mx-auto"
                 >
                   {banner.subtitle}
                 </motion.p>
@@ -99,14 +99,14 @@ const Hero = () => {
       {/* Removed indicator section */}
 
       <button
-        className="custom-prev absolute top-1/2 left-4 z-20 w-10 h-10 bg-white hover:bg-main hover:text-white text-gray-950 shadow-lg rounded-full flex items-center justify-center transition-all transform -translate-y-1/2"
+        className="custom-prev absolute top-1/2 left-4 z-20 w-8 h-8 bg-white hover:bg-main hover:text-white text-gray-950 shadow-lg rounded-full flex items-center justify-center transition-all transform -translate-y-1/2"
         onClick={() => swiperRef.current?.swiper.slidePrev()}
       >
         <FiChevronLeft className="w-6 h-6" />
       </button>
 
       <button
-        className="custom-next absolute top-1/2 right-4 z-20 w-10 h-10 bg-white hover:bg-main hover:text-white text-gray-950 shadow-lg rounded-full flex items-center justify-center transition-all transform -translate-y-1/2"
+        className="custom-next absolute top-1/2 right-4 z-20 w-8 h-8 bg-white hover:bg-main hover:text-white text-gray-950 shadow-lg rounded-full flex items-center justify-center transition-all transform -translate-y-1/2"
         onClick={() => swiperRef.current?.swiper.slideNext()}
       >
         <FiChevronRight className="w-6 h-6" />
