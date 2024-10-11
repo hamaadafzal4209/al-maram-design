@@ -16,9 +16,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Sellify - Your Ultimate eCommerce Store",
-  description:
-    "Discover the best products at unbeatable prices with Sellify, your go-to eCommerce platform.",
+  title: "Almaram Alfaneyah",
 };
 
 export default function RootLayout({ children }) {
@@ -31,7 +29,9 @@ export default function RootLayout({ children }) {
         poppins.variable
       )}
     >
-      <body className="font-poppins overflow-x-hidden bg-gradient-to-b from-gray-100 via-gray-50 to-white">{children}</body>
+      <body className="font-poppins overflow-x-hidden bg-gradient-to-b from-gray-100 via-gray-50 to-white">
+        {children}
+      </body>
     </html>
   );
 }
