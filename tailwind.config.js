@@ -17,7 +17,7 @@ module.exports = {
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+          foreground: "hsl(tvar(--popover-foreground))",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
