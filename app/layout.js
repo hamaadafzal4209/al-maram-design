@@ -26,14 +26,12 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={cn(
-        "min-h-screen bg-dark-900 font-sans antialiased bg-gradient-to-b from-gray-800 via-gray-900 to-black",
+        "min-h-screen bg-dark-300 font-sans antialiased",
         inter.variable,
         poppins.variable
       )}
     >
-      <body className="font-poppins text-gray-200 bg-dark-900 overflow-x-hidden">
-        {children}
-      </body>
+      <body className="font-poppins overflow-x-hidden bg-gradient-to-b from-gray-100 via-gray-50 to-white">{children}</body>
     </html>
   );
 }
