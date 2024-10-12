@@ -44,73 +44,81 @@ export default function ContactSection() {
                 {/* Social Media Icons with Tooltips */}
                 <Tooltip side="top" align="center">
                   <TooltipTrigger>
-                   <div className="gradient-icon-border">
-                   <a
-                      href="https://www.facebook.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center w-[44px] h-[44px] bg-gradient-to-br from-slate-700 to-slate-800 rounded-full text-gray-300 hover:text-blue-600 transition-colors duration-300"
-                      aria-label="Facebook"
-                    >
-                      <FaFacebook className="text-2xl" />
-                    </a>
-                   </div>
+                    <div className="gradient-icon-border">
+                      <a
+                        href="https://www.facebook.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center w-[44px] h-[44px] bg-gradient-to-br from-slate-700 to-slate-800 rounded-full text-gray-300 hover:text-blue-600 transition-colors duration-300"
+                        aria-label="Facebook"
+                      >
+                        <FaFacebook className="text-2xl" />
+                      </a>
+                    </div>
                   </TooltipTrigger>
                   <TooltipContent>Facebook</TooltipContent>
                 </Tooltip>
                 <Tooltip side="top" align="center">
                   <TooltipTrigger>
-                    <a
-                      href="https://www.instagram.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center w-10 h-10 text-gray-300 hover:text-pink-600 transition-colors duration-300"
-                      aria-label="Instagram"
-                    >
-                      <FaInstagram className="text-2xl" />
-                    </a>
+                    <div className="gradient-icon-border">
+                      <a
+                        href="https://www.instagram.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center w-[44px] h-[44px] bg-gradient-to-br from-slate-700 to-slate-800 rounded-full text-gray-300 hover:text-pink-600 transition-colors duration-300"
+                        aria-label="Instagram"
+                      >
+                        <FaInstagram className="text-2xl" />
+                      </a>
+                    </div>
                   </TooltipTrigger>
                   <TooltipContent>Instagram</TooltipContent>
                 </Tooltip>
                 <Tooltip side="top" align="center">
                   <TooltipTrigger>
-                    <a
-                      href="https://www.linkedin.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center w-10 h-10 text-gray-300 hover:text-blue-500 transition-colors duration-300"
-                      aria-label="LinkedIn"
-                    >
-                      <FaLinkedin className="text-2xl" />
-                    </a>
+                    <div className="gradient-icon-border">
+                      <a
+                        href="https://www.linkedin.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center w-[44px] h-[44px] bg-gradient-to-br from-slate-700 to-slate-800 rounded-full text-gray-300 hover:text-blue-500 transition-colors duration-300"
+                        aria-label="LinkedIn"
+                      >
+                        <FaLinkedin className="text-2xl" />
+                      </a>
+                    </div>
                   </TooltipTrigger>
                   <TooltipContent>LinkedIn</TooltipContent>
                 </Tooltip>
                 <Tooltip side="top" align="center">
                   <TooltipTrigger>
-                    <a
-                      href="https://www.twitter.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center w-10 h-10 text-gray-300 hover:text-blue-400 transition-colors duration-300"
-                      aria-label="Twitter"
-                    >
-                      <FaTwitter className="text-2xl" />
-                    </a>
+                    <div className="gradient-icon-border">
+                      <a
+                        href="https://www.twitter.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center w-[44px] h-[44px] bg-gradient-to-br from-slate-700 to-slate-800 rounded-full text-gray-300 hover:text-blue-400 transition-colors duration-300"
+                        aria-label="Twitter"
+                      >
+                        <FaTwitter className="text-2xl" />
+                      </a>
+                    </div>
                   </TooltipTrigger>
                   <TooltipContent>Twitter</TooltipContent>
                 </Tooltip>
                 <Tooltip side="top" align="center">
                   <TooltipTrigger>
-                    <a
-                      href="https://www.whatsapp.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center w-10 h-10 text-gray-300 hover:text-green-500 transition-colors duration-300"
-                      aria-label="WhatsApp"
-                    >
-                      <FaWhatsapp className="text-2xl" />
-                    </a>
+                    <div className="gradient-icon-border">
+                      <a
+                        href="https://www.whatsapp.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center w-[44px] h-[44px] bg-gradient-to-br from-slate-700 to-slate-800 rounded-full text-gray-300 hover:text-green-500 transition-colors duration-300"
+                        aria-label="WhatsApp"
+                      >
+                        <FaWhatsapp className="text-2xl" />
+                      </a>
+                    </div>
                   </TooltipTrigger>
                   <TooltipContent>WhatsApp</TooltipContent>
                 </Tooltip>
