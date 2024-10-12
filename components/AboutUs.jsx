@@ -103,7 +103,7 @@ export default function AboutSection() {
                   />
                   <div className="ml-4">
                     <h3 className="font-semibold text-xl text-white">
-                      Industry Certifications
+                      Certifications
                     </h3>
                     <p className="text-sm text-gray-400">
                       Recognized for Excellence and Quality

@@ -25,7 +25,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="shadow-sm bg-gray-900">
+    <nav className="shadow-sm  bg-gradient-to-r from-gray-900 to-gray-800">
       <div className="flex items-center justify-between px-6 py-4 lg:px-12 2xl:px-20">
         <Link href="/">
           <Image
@@ -48,7 +48,7 @@ const Navbar = () => {
           <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center py-2 hover:text-main-300 transition-colors duration-200">
               Company
-              <ChevronDown className="ml-1 h-4 w-4 text-main-300" />
+              <ChevronDown className="ml-1 h-4 w-4 text-white hover:text-main-300" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="mt-2 bg-gray-800 text-white rounded-lg shadow-lg">
               <DropdownMenuItem>
@@ -78,7 +78,7 @@ const Navbar = () => {
           <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center py-2 hover:text-main-300 transition-colors duration-200">
               Products
-              <ChevronDown className="ml-1 h-4 w-4 text-main-300" />
+              <ChevronDown className="ml-1 h-4 w-4 text-white hover:text-main-300" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="mt-2 bg-gray-800 text-white rounded-lg shadow-lg">
               <div className="max-h-[70vh] w-[200px] no-scrollbar overflow-y-auto">
@@ -90,7 +90,7 @@ const Navbar = () => {
                     Low Voltage Switchgear
                   </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem>  
+                <DropdownMenuItem>
                   <Link
                     href="/"
                     className="w-full text-sm hover:text-main-300 transition-colors duration-200"
@@ -157,7 +157,7 @@ const Navbar = () => {
 
         <div className="hidden md:flex md:items-center">
           <Link href="/">
-            <Button className="bg-main-300 text-white text-base py-2 px-4 rounded-md hover:bg-main-400 transition duration-200">
+            <Button className="bg-gradient-to-r from-main-300 to-main-500 text-white text-base py-2 px-4 rounded-md shadow-md hover:shadow-lg hover:from-main-400 hover:to-main-600 transition duration-200">
               Contact Us
             </Button>
           </Link>
