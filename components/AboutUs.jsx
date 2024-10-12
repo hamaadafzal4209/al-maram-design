@@ -12,7 +12,7 @@ export default function AboutSection() {
           {/* Images Section */}
           <div className="lg:w-1/2 grid grid-cols-2 gap-6">
             <Slide direction="up" triggerOnce duration={1000}>
-              <div className="relative h-[400px]">
+              <div className="relative h-[300px] md:h-[400px]">
                 <Image
                   src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   alt="Modern manufacturing facility with robotic arms"
@@ -24,7 +24,7 @@ export default function AboutSection() {
               </div>
             </Slide>
             <Slide direction="up" triggerOnce duration={1000}>
-              <div className="relative h-[400px] mt-6">
+              <div className="relative h-[300px] md:h-[400px] mt-6">
                 <Image
                   src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&auto=format&fit=crop&q=60"
                   alt="Precision welding process"
@@ -40,7 +40,7 @@ export default function AboutSection() {
           {/* Text Section */}
           <div className="lg:w-1/2 text-gray-100">
             <Slide direction="up" triggerOnce duration={1000}>
-              <h2 className="text-4xl font-extrabold leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-yellow-500">
+              <h2 className="text-2xl md:text-4xl font-extrabold leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-yellow-500">
                 Almaram Alfaneyah Manufacturing Company
               </h2>
             </Slide>
