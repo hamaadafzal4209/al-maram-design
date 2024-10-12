@@ -4,7 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import { Navigation, Autoplay } from "swiper/modules"; // Ensure Navigation is imported correctly
 import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Star } from "lucide-react"; // Import Star icon
+import { StarFilledIcon } from "@radix-ui/react-icons";
 
 export default function TestimonialSection() {
   const testimonials = [
@@ -14,6 +15,7 @@ export default function TestimonialSection() {
         "https://images.unsplash.com/photo-1534308143481-c55f00be8bd7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHVzZXIlMjBwcm9maWxlfGVufDB8fDB8fHww",
       position: "CEO, Example Inc.",
       text: "This company exceeded our expectations. Their professionalism and commitment are unmatched!",
+      rating: 5, // Add rating
     },
     {
       name: "Jane Smith",
@@ -21,6 +23,7 @@ export default function TestimonialSection() {
         "https://images.unsplash.com/photo-1463453091185-61582044d556?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHVzZXIlMjBwcm9maWxlfGVufDB8fDB8fHww",
       position: "Manager, Example Ltd.",
       text: "A wonderful experience working with this team. Highly recommended!",
+      rating: 4, // Add rating
     },
     {
       name: "Robert Johnson",
@@ -28,6 +31,7 @@ export default function TestimonialSection() {
         "https://images.unsplash.com/photo-1525357816819-392d2380d821?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHVzZXIlMjBwcm9maWxlfGVufDB8fDB8fHww",
       position: "Director, Example Co.",
       text: "The quality of service provided by this company is excellent. We are very happy!",
+      rating: 5, // Add rating
     },
   ];
 
@@ -66,9 +70,22 @@ export default function TestimonialSection() {
                     />
                   </div>
                 </div>
-                <p className="text-lg text-gray-300 mb-6">
-                  {testimonial.text}
-                </p>
+                <p className="text-lg text-gray-300 mb-6">{testimonial.text}</p>
+
+                {/* Stars Rating */}
+                <div className="flex justify-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <StarFilledIcon
+                      key={i}
+                      className={`w-5 h-5 ${
+                        i < testimonial.rating
+                          ? "text-yellow-400"
+                          : "text-gray-400"
+                      }`}
+                    />
+                  ))}
+                </div>
+
                 <h4 className="text-xl font-semibold text-white">
                   {testimonial.name}
                 </h4>
