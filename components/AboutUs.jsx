@@ -2,23 +2,8 @@
 
 import Image from "next/image";
 import { Fade, Slide } from "react-awesome-reveal";
-import { useEffect } from "react";
 
 export default function AboutSection() {
-  useEffect(() => {
-    const handleScroll = () => {
-      const fadeElements = document.querySelectorAll(".fade-in");
-      fadeElements.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom >= 0) {
-          el.classList.add("visible");
-        }
-      });
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <section className="py-12 md:py-16 text-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">

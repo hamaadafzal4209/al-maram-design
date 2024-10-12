@@ -6,6 +6,7 @@ import "swiper/css/bundle";
 import { Navigation } from "swiper/modules";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useRef } from "react";
+import { Card, CardContent } from "./ui/card";
 
 const cardData = [
   {
@@ -139,7 +140,7 @@ export default function VoltageElectricitySlider() {
   const swiperRef = useRef(null);
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 md:py-8 lg:px-12 xl:px-16 rounded-lg shadow-md">
+    <div className="w-full max-w-7xl mx-auto px-4 py-12 lg:px-12 xl:px-16">
       <h2 className="text-3xl font-bold text-center mb-8 text-white">
         What We Offer – Products
       </h2>
@@ -147,7 +148,7 @@ export default function VoltageElectricitySlider() {
         spaceBetween={30}
         loop={true}
         modules={[Navigation]}
-        className="mySwiper"
+        className="mySwiper rounded-md"
         navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }}
         breakpoints={{
           640: { slidesPerView: 1 },
@@ -158,23 +159,25 @@ export default function VoltageElectricitySlider() {
       >
         {cardData.map((card) => (
           <SwiperSlide key={card.id} className="flex justify-center">
-            <div className="bg-gray-800 rounded-lg shadow-2xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+            <Card className="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:shadow-xl flex flex-col min-h-[380px]">
               <Image
                 src={card.image}
                 alt={card.title}
                 width={500}
                 height={300}
-                className="w-full h-48 object-cover transition-transform duration-300"
+                className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
               />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">{card.title}</h3>
+              <CardContent className="flex-grow p-6">
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {card.title}
+                </h3>
                 <ul className="list-disc pl-5 text-sm text-gray-300">
                   {card.points.map((point, index) => (
                     <li key={index}>{point}</li>
                   ))}
                 </ul>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           </SwiperSlide>
         ))}
       </Swiper>
@@ -189,13 +192,13 @@ const CustomNavigation = ({ swiperRef }) => {
   return (
     <div className="flex justify-center mt-6">
       <button
-        className="custom-prev bg-main-500 text-white p-3 rounded-full shadow-lg hover:bg-main-400 transition duration-300 mr-4 flex items-center justify-center"
+        className="custom-prev bg-main-300 text-white p-3 rounded-full shadow-lg hover:bg-main-400 transition duration-300 mr-4 flex items-center justify-center"
         onClick={() => swiperRef.current?.slidePrev()}
       >
         <FaArrowLeft size={20} />
       </button>
       <button
-        className="custom-next bg-main-500 text-white p-3 rounded-full shadow-lg hover:bg-main-400 transition duration-300 flex items-center justify-center"
+        className="custom-next bg-main-300 text-white p-3 rounded-full shadow-lg hover:bg-main-400 transition duration-300 flex items-center justify-center"
         onClick={() => swiperRef.current?.slideNext()}
       >
         <FaArrowRight size={20} />
