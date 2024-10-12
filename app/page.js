@@ -8,6 +8,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import Services from "@/components/Services";
 import { Sponser } from "@/components/Sponsers";
 import Stats from "@/components/Stats";
+import TestimonialSection from "@/components/Testimonial";
 import React from "react";
 
 const page = () => {
@@ -17,9 +18,9 @@ const page = () => {
       <Hero />
       <WhoWeAre />
       <VoltageElectricitySlider />
-      {/* <Stats /> */}
       <Services />
       <Sponser />
+      <TestimonialSection/>
       <ContactSection />
       <Footer />
       <ScrollToTop />
