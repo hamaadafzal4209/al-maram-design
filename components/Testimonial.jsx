@@ -36,7 +36,7 @@ export default function TestimonialSection() {
   ];
 
   return (
-    <section className="py-16 relative">
+    <section className="pb-12 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-20">
         <h2 className="text-3xl font-bold text-center text-main mb-12">
           What Our Clients Say

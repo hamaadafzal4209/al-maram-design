@@ -3,19 +3,19 @@ import Marquee from "./ui/marquee";
 import Image from "next/image";
 
 const partners = [
-  { name: "Acme Corp", logo: "/assets/brand1.jpg" },
-  { name: "Globex", logo: "/assets/brand2.jpg" },
-  { name: "Soylent Corp", logo: "/assets/brand3.jpg" },
-  { name: "Initech", logo: "/assets/brand4.jpg" },
-  { name: "Umbrella Corp", logo: "/assets/brand5.jpg" },
-  { name: "Hooli", logo: "/assets/brand6.jpg" },
-  { name: "Vehement Capital", logo: "/assets/brand7.jpg" },
-  { name: "Massive Dynamic", logo: "/assets/brand8.jpg" },
-  { name: "Cyberdyne Systems", logo: "/assets/brand9.jpg" },
-  { name: "Oscorp Industries", logo: "/assets/brand10.jpg" },
-  { name: "Wayne Enterprises", logo: "/assets/brand11.jpg" },
-  { name: "Stark Industries", logo: "/assets/brand12.jpg" },
-  { name: "LexCorp", logo: "/assets/brand13.jpg" },
+  { name: "Acme Corp", logo: "/assets/brand1.png" },
+  { name: "Globex", logo: "/assets/brand2.png" },
+  { name: "Soylent Corp", logo: "/assets/brand3.png" },
+  { name: "Initech", logo: "/assets/brand4.png" },
+  { name: "Umbrella Corp", logo: "/assets/brand5.png" },
+  { name: "Hooli", logo: "/assets/brand6.png" },
+  { name: "Vehement Capital", logo: "/assets/brand7.png" },
+  { name: "Massive Dynamic", logo: "/assets/brand8.png" },
+  { name: "Cyberdyne Systems", logo: "/assets/brand9.png" },
+  { name: "Oscorp Industries", logo: "/assets/brand10.png" },
+  { name: "Wayne Enterprises", logo: "/assets/brand11.png" },
+  { name: "Stark Industries", logo: "/assets/brand12.png" },
+  { name: "LexCorp", logo: "/assets/brand13.png" },
 ];
 
 const firstRow = partners.slice(0, partners.length / 2);
@@ -45,7 +45,8 @@ export function Sponser() {
           Our Trusted Partners
         </h2>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-          Collaborating with industry leaders to drive innovation and excellence.
+          Collaborating with industry leaders to drive innovation and
+          excellence.
         </p>
       </div>
       <Marquee pauseOnHover className="[--duration:20s]">
