@@ -52,12 +52,18 @@ const Navbar = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="mt-2 bg-gray-800 text-white rounded-lg shadow-lg">
               <DropdownMenuItem>
-                <Link href="/" className="w-full text-sm hover:text-main-300 transition-colors duration-200">
+                <Link
+                  href="/"
+                  className="w-full text-sm hover:text-main-300 transition-colors duration-200"
+                >
                   Quality Control
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <Link href="/" className="w-full text-sm hover:text-main-300 transition-colors duration-200">
+                <Link
+                  href="/"
+                  className="w-full text-sm hover:text-main-300 transition-colors duration-200"
+                >
                   Certification
                 </Link>
               </DropdownMenuItem>
@@ -76,37 +82,58 @@ const Navbar = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="mt-2 bg-gray-800 text-white rounded-lg shadow-lg">
               <DropdownMenuItem>
-                <Link href="/" className="w-full text-sm hover:text-main-300 transition-colors duration-200">
+                <Link
+                  href="/"
+                  className="w-full text-sm hover:text-main-300 transition-colors duration-200"
+                >
                   Low Voltage Switchgear
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <Link href="/" className="w-full text-sm hover:text-main-300 transition-colors duration-200">
+                <Link
+                  href="/"
+                  className="w-full text-sm hover:text-main-300 transition-colors duration-200"
+                >
                   Motor Control Centers
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <Link href="/" className="w-full text-sm hover:text-main-300 transition-colors duration-200">
+                <Link
+                  href="/"
+                  className="w-full text-sm hover:text-main-300 transition-colors duration-200"
+                >
                   HVAC Control Panels
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <Link href="/" className="w-full text-sm hover:text-main-300 transition-colors duration-200">
+                <Link
+                  href="/"
+                  className="w-full text-sm hover:text-main-300 transition-colors duration-200"
+                >
                   Synchronizing Panels
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <Link href="/" className="w-full text-sm hover:text-main-300 transition-colors duration-200">
+                <Link
+                  href="/"
+                  className="w-full text-sm hover:text-main-300 transition-colors duration-200"
+                >
                   Automatic/Manual Transfer Switch Panels
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <Link href="/" className="w-full text-sm hover:text-main-300 transition-colors duration-200">
+                <Link
+                  href="/"
+                  className="w-full text-sm hover:text-main-300 transition-colors duration-200"
+                >
                   Power Factor Improvement Panels
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <Link href="/" className="w-full text-sm hover:text-main-300 transition-colors duration-200">
+                <Link
+                  href="/"
+                  className="w-full text-sm hover:text-main-300 transition-colors duration-200"
+                >
                   Cables and Bus Bar Trunking
                 </Link>
               </DropdownMenuItem>
@@ -156,7 +183,7 @@ const Navbar = () => {
                 </Link>
                 <div>
                   <button
-                    className="flex items-center justify-between w-full py-2 font-semibold rounded-md hover:text-main-300 transition-colors duration-200"
+                    className="flex items-center justify-between w-full font-semibold rounded-md hover:text-main-300 transition-colors duration-200"
                     onClick={() => toggleSection("company")}
                   >
                     Company
@@ -168,7 +195,7 @@ const Navbar = () => {
                   </button>
                   <div
                     className={`flex flex-col gap-4 bg-gray-800 overflow-hidden transition-max-height duration-300 ease-in-out ${
-                      openSections.company ? "max-h-40" : "max-h-0"
+                      openSections.company ? "max-h-40 mt-3" : "max-h-0"
                     }`}
                   >
                     <Link
@@ -193,7 +220,7 @@ const Navbar = () => {
                 </Link>
                 <div>
                   <button
-                    className="flex items-center justify-between w-full py-2 text-base font-semibold rounded-md hover:text-main-300 transition-colors duration-200"
+                    className="flex items-center justify-between w-full text-base font-semibold rounded-md hover:text-main-300 transition-colors duration-200"
                     onClick={() => toggleSection("products")}
                   >
                     Products
@@ -205,7 +232,7 @@ const Navbar = () => {
                   </button>
                   <div
                     className={`gap-3 bg-gray-800 overflow-hidden transition-max-height duration-300 ease-in-out ${
-                      openSections.products ? "max-h-full" : "max-h-0"
+                      openSections.products ? "max-h-96 mt-3" : "max-h-0"
                     }`}
                   >
                     <Link
@@ -263,6 +290,12 @@ const Navbar = () => {
                   className="block text-base font-semibold hover:text-main-300 transition-colors duration-200"
                 >
                   About Us
+                </Link>
+                <Link
+                  href="/"
+                  className="block text-base font-semibold hover:text-main-300 transition-colors duration-200"
+                >
+                  Contact Us
                 </Link>
               </nav>
             </SheetContent>
