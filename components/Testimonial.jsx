@@ -2,7 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules"; // Ensure Navigation is imported correctly
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -32,18 +32,19 @@ export default function TestimonialSection() {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-900 to-gray-800">
+    <section className="py-16 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-20">
-        <h2 className="text-4xl font-bold text-center text-main mb-12">
+        <h2 className="text-3xl font-bold text-center text-main mb-12">
           What Our Clients Say
         </h2>
 
+        {/* Swiper Component */}
         <Swiper
-          modules={[Navigation, Autoplay]}
+          modules={[Navigation, Autoplay]} // Ensure Navigation module is included
           spaceBetween={30}
           slidesPerView={1}
           navigation={{
-            nextEl: ".custom-next",
+            nextEl: ".custom-next", // Make sure classes match
             prevEl: ".custom-prev",
           }}
           loop={true}
@@ -53,7 +54,7 @@ export default function TestimonialSection() {
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <div className="p-10 shadow-lg text-center transition-transform transform hover:scale-105 duration-300">
+              <div className="bg-gray-800 rounded-lg p-8 shadow-lg text-center hover:shadow-xl transition duration-300 ease-in-out">
                 <div className="flex justify-center mb-6">
                   <div className="relative w-24 h-24">
                     <Image
@@ -61,12 +62,12 @@ export default function TestimonialSection() {
                       height={1000}
                       src={testimonial.image}
                       alt={testimonial.name}
-                      className="object-cover rounded-full shadow-md"
+                      className="object-cover h-24 w-24 rounded-full shadow-md"
                     />
                   </div>
                 </div>
                 <p className="text-lg text-gray-300 mb-6">
-                  &ldquo;{testimonial.text}&rdquo;
+                  {testimonial.text}
                 </p>
                 <h4 className="text-xl font-semibold text-white">
                   {testimonial.name}
@@ -76,21 +77,6 @@ export default function TestimonialSection() {
             </SwiperSlide>
           ))}
         </Swiper>
-
-        <div className="flex justify-between absolute top-1/2 transform -translate-y-1/2 w-full px-4 lg:px-12 xl:px-20 z-10">
-          <button
-            className="custom-prev p-4 bg-main rounded-full shadow-lg hover:bg-main/80 transition transform hover:scale-105"
-            aria-label="Previous Slide"
-          >
-            <ChevronLeft className="text-white w-8 h-8" />
-          </button>
-          <button
-            className="custom-next p-4 bg-main rounded-full shadow-lg hover:bg-main/80 transition transform hover:scale-105"
-            aria-label="Next Slide"
-          >
-            <ChevronRight className="text-white w-8 h-8" />
-          </button>
-        </div>
       </div>
     </section>
   );
