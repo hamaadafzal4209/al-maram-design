@@ -81,62 +81,64 @@ const Navbar = () => {
               <ChevronDown className="ml-1 h-4 w-4 text-main-300" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="mt-2 bg-gray-800 text-white rounded-lg shadow-lg">
-              <DropdownMenuItem>
-                <Link
-                  href="/"
-                  className="w-full text-sm hover:text-main-300 transition-colors duration-200"
-                >
-                  Low Voltage Switchgear
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link
-                  href="/"
-                  className="w-full text-sm hover:text-main-300 transition-colors duration-200"
-                >
-                  Motor Control Centers
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link
-                  href="/"
-                  className="w-full text-sm hover:text-main-300 transition-colors duration-200"
-                >
-                  HVAC Control Panels
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link
-                  href="/"
-                  className="w-full text-sm hover:text-main-300 transition-colors duration-200"
-                >
-                  Synchronizing Panels
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link
-                  href="/"
-                  className="w-full text-sm hover:text-main-300 transition-colors duration-200"
-                >
-                  Automatic/Manual Transfer Switch Panels
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link
-                  href="/"
-                  className="w-full text-sm hover:text-main-300 transition-colors duration-200"
-                >
-                  Power Factor Improvement Panels
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link
-                  href="/"
-                  className="w-full text-sm hover:text-main-300 transition-colors duration-200"
-                >
-                  Cables and Bus Bar Trunking
-                </Link>
-              </DropdownMenuItem>
+              <div className="max-h-[70vh] w-[200px] no-scrollbar overflow-y-auto">
+                <DropdownMenuItem>
+                  <Link
+                    href="/"
+                    className="w-full text-sm hover:text-main-300 transition-colors duration-200"
+                  >
+                    Low Voltage Switchgear
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>  
+                  <Link
+                    href="/"
+                    className="w-full text-sm hover:text-main-300 transition-colors duration-200"
+                  >
+                    Motor Control Centers
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link
+                    href="/"
+                    className="w-full text-sm hover:text-main-300 transition-colors duration-200"
+                  >
+                    HVAC Control Panels
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link
+                    href="/"
+                    className="w-full text-sm hover:text-main-300 transition-colors duration-200"
+                  >
+                    Synchronizing Panels
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link
+                    href="/"
+                    className="w-full text-sm hover:text-main-300 transition-colors duration-200"
+                  >
+                    Automatic/Manual Transfer Switch Panels
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link
+                    href="/"
+                    className="w-full text-sm hover:text-main-300 transition-colors duration-200"
+                  >
+                    Power Factor Improvement Panels
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link
+                    href="/"
+                    className="w-full text-sm hover:text-main-300 transition-colors duration-200"
+                  >
+                    Cables and Bus Bar Trunking
+                  </Link>
+                </DropdownMenuItem>
+              </div>
             </DropdownMenuContent>
           </DropdownMenu>
           <Link
