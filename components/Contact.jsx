@@ -44,15 +44,17 @@ export default function ContactSection() {
                 {/* Social Media Icons with Tooltips */}
                 <Tooltip side="top" align="center">
                   <TooltipTrigger>
-                    <a
+                   <div className="gradient-icon-border">
+                   <a
                       href="https://www.facebook.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center w-10 h-10 text-gray-300 hover:text-blue-600 transition-colors duration-300"
+                      className="flex items-center justify-center w-[44px] h-[44px] bg-gradient-to-br from-slate-700 to-slate-800 rounded-full text-gray-300 hover:text-blue-600 transition-colors duration-300"
                       aria-label="Facebook"
                     >
                       <FaFacebook className="text-2xl" />
                     </a>
+                   </div>
                   </TooltipTrigger>
                   <TooltipContent>Facebook</TooltipContent>
                 </Tooltip>

@@ -93,15 +93,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 46px;
-  width: 46px;
+  height: 44px;
+  width: 44px;
 }
 
 .gradient-icon-border::after {
   content: "";
   position: absolute;
-  inset: -3px;
-  background-image: linear-gradient(107.45deg, #ffffff 3.76%, #323448 48.43%);
+  inset: -2px;
+  background-image: linear-gradient(107.45deg, #ffffff 3.76%, #3e4fff 48.43%);
   border-radius: 1000px;
   z-index: -1;
 }
