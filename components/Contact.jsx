@@ -131,37 +131,6 @@ export default function ContactSection() {
                 <span>Call Us: +966 56 910 5617</span>
               </p>
             </div>
-
-            {/* Contact Form */}
-            <div className="mt-8 bg-gray-800 p-6 rounded-lg shadow-md">
-              <h3 className="text-lg font-semibold text-gray-100 mb-4">Get in Touch</h3>
-              <form className="flex flex-col space-y-4">
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="p-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-main"
-                  required
-                />
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="p-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-main"
-                  required
-                />
-                <textarea
-                  placeholder="Your Message"
-                  className="p-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-main"
-                  rows="4"
-                  required
-                ></textarea>
-                <button
-                  type="submit"
-                  className="py-2 px-4 bg-main text-white rounded hover:bg-main-dark transition-colors duration-300"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
           </div>
         </div>
       </div>
