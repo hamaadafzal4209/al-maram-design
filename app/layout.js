@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         poppins.variable
       )}
     >
-      <body className="font-poppins overflow-x-hidden bg-gradient-to-b from-gray-900 via-gray-800 to-gray-700 text-gray-100">
+      <body className="font-poppins overflow-x-hidden bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 text-gray-100">
         {children}
       </body>
     </html>

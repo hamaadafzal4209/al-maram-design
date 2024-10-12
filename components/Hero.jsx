@@ -99,14 +99,14 @@ const Hero = () => {
       {/* Removed indicator section */}
 
       <button
-        className="custom-prev absolute top-1/2 left-4 z-20 w-8 h-8 bg-white hover:bg-main hover:text-white text-gray-950 shadow-lg rounded-full flex items-center justify-center transition-all transform -translate-y-1/2"
+        className="custom-prev absolute top-1/2 left-4 z-20 w-8 h-8 bg-white hover:bg-main-300 hover:text-white text-gray-950 shadow-lg rounded-full flex items-center justify-center transition-all transform -translate-y-1/2"
         onClick={() => swiperRef.current?.swiper.slidePrev()}
       >
         <FiChevronLeft className="w-6 h-6" />
       </button>
 
       <button
-        className="custom-next absolute top-1/2 right-4 z-20 w-8 h-8 bg-white hover:bg-main hover:text-white text-gray-950 shadow-lg rounded-full flex items-center justify-center transition-all transform -translate-y-1/2"
+        className="custom-next absolute top-1/2 right-4 z-20 w-8 h-8 bg-white hover:bg-main-300 hover:text-white text-gray-950 shadow-lg rounded-full flex items-center justify-center transition-all transform -translate-y-1/2"
         onClick={() => swiperRef.current?.swiper.slideNext()}
       >
         <FiChevronRight className="w-6 h-6" />
