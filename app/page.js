@@ -8,7 +8,6 @@ import ScrollToTop from "@/components/ScrollToTop";
 import Services from "@/components/Services";
 import { Sponser } from "@/components/Sponsers";
 import Stats from "@/components/Stats";
-import TeamMember from "@/components/TeamMembers";
 import React from "react";
 
 const page = () => {
@@ -20,7 +19,6 @@ const page = () => {
       <VoltageElectricitySlider />
       {/* <Stats /> */}
       <Services />
-      <TeamMember />
       <Sponser />
       <ContactSection />
       <Footer />

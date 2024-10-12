@@ -140,7 +140,7 @@ export default function VoltageElectricitySlider() {
   const swiperRef = useRef(null);
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-12 lg:px-12 xl:px-16">
+    <div className="w-full max-w-7xl mx-auto px-4 py-0 lg:px-12 xl:px-16">
       <h2 className="text-3xl font-bold text-center mb-8 text-white">
         What We Offer – Products
       </h2>
@@ -159,7 +159,7 @@ export default function VoltageElectricitySlider() {
       >
         {cardData.map((card) => (
           <SwiperSlide key={card.id} className="flex justify-center">
-            <Card className="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:shadow-xl flex flex-col min-h-[380px]">
+            <Card className="bg-gradient-to-br from-slate-700 to-slate-800 rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:shadow-xl flex flex-col min-h-[380px]">
               <Image
                 src={card.image}
                 alt={card.title}

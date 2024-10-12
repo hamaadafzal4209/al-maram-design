@@ -17,37 +17,37 @@ const specializations = [
     icon: CircleIcon,
     title: "Manufacturing of LV panel boards",
     description:
-      "State-of-the-art production of low voltage panel boards for various applications.",
+      "State-of-the-art production of low voltage panel boards for various applications, ensuring high efficiency, reliability, and compliance with international standards.",
   },
   {
     icon: CableIcon,
     title: "Complete wiring and cable management",
     description:
-      "Expert cable terminations, connections, indications, and labeling of panels.",
+      "Expert cable terminations, connections, indications, and labeling of panels, ensuring safety, organization, and ease of maintenance for all electrical systems.",
   },
   {
     icon: WrenchIcon,
     title: "Supply and installation",
     description:
-      "Seamless supply and professional installation of panel boards.",
+      "Seamless supply and professional installation of panel boards, guaranteeing adherence to specifications and enhancing the overall functionality of your electrical systems.",
   },
   {
     icon: TestTubeIcon,
     title: "Testing and Commissioning",
     description:
-      "Rigorous testing and commissioning to ensure optimal performance.",
+      "Rigorous testing and commissioning to ensure optimal performance, reliability, and safety, providing peace of mind and thorough documentation for future reference.",
   },
   {
     icon: TruckIcon,
     title: "After sales services",
     description:
-      "Comprehensive support and maintenance services post-installation.",
+      "Comprehensive support and maintenance services post-installation, including regular inspections, troubleshooting, and prompt response to customer inquiries and concerns.",
   },
   {
     icon: ShieldCheckIcon,
     title: "Predictive and preventive maintenance",
     description:
-      "Advanced maintenance strategies to prevent issues and extend equipment life.",
+      "Advanced maintenance strategies to prevent issues and extend equipment life, employing the latest technologies and methodologies to enhance system reliability and performance.",
   },
 ];
 
@@ -62,7 +62,7 @@ export default function Services() {
           >
             What We Do
           </Badge>
-          <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+          <h2 className="text-3xl font-extrabold tracking-tight md:text-5xl">
             We Are Specialists In
           </h2>
           <div className="mt-4 max-w-3xl mx-auto">
@@ -72,18 +72,18 @@ export default function Services() {
             </p>
           </div>
         </div>
-        <Fade>
+        <Fade triggerOnce>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {specializations.map((spec, index) => (
-              <Fade key={index} delay={index * 100}>
+              <Fade triggerOnce key={index} delay={index * 100}>
                 <Card
-                  className="overflow-hidden hover:shadow-lg hover:-translate-y-2 transition-all duration-300 bg-gray-800 border border-gray-700"
+                  className="overflow-hidden bg-gradient-to-br from-slate-700 to-slate-800 hover:shadow-lg hover:-translate-y-2 transition-all duration-300 bg-gray-800 border border-gray-700"
                 >
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4">
                       <div className="flex-shrink-0">
-                        <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-main">
-                          <spec.icon className="h-8 w-8 text-main" />
+                        <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-main-300">
+                          <spec.icon className="h-8 w-8 text-main-300" />
                         </div>
                       </div>
                       <div className="flex-1 min-w-0">
@@ -92,7 +92,7 @@ export default function Services() {
                         </h3>
                       </div>
                     </div>
-                    <p className="mt-4 text-base text-gray-400">
+                    <p className="mt-4 text-base text-gray-400 line-clamp-4">
                       {spec.description}
                     </p>
                   </CardContent>
