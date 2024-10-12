@@ -13,7 +13,7 @@ const cardData = [
     id: 1,
     title: "High Voltage Power Lines",
     image:
-      "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=500&h=300&fit=crop",
+      "https://plus.unsplash.com/premium_photo-1682145728214-dbd62535af3f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     points: [
       "Transmission of electricity",
       "High voltage systems",
@@ -26,7 +26,7 @@ const cardData = [
     id: 2,
     title: "Circuit Boards",
     image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1631378297854-185cff6b0986?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fENpcmN1aXQlMjBCb2FyZHN8ZW58MHx8MHx8fDA%3D",
     points: [
       "Electronic components",
       "Voltage regulation",
@@ -38,7 +38,7 @@ const cardData = [
     id: 3,
     title: "Renewable Energy",
     image:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=500&h=300&fit=crop",
+    "https://images.unsplash.com/photo-1545208942-e1c9c916524b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fFJlbmV3YWJsZSUyMEVuZXJneXxlbnwwfHwwfHx8MA%3D%3D",
     points: [
       "Solar panel voltage",
       "Wind turbine generators",
