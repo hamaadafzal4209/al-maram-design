@@ -49,7 +49,18 @@ module.exports = {
           4: "hsl(var(--chart-4))",
           5: "hsl(var(--chart-5))",
         },
-        main: "#F69E2C",
+        main: {
+          50: "#FFF6E5",  // Very light
+          100: "#FFE0B2", // Light
+          200: "#FFC107", // Lighter
+          300: "#F69E2C", // Default
+          400: "#E68A19", // Darker
+          500: "#C76A19", // Dark
+          600: "#A95B17", // Very dark
+          700: "#8B4D14", // Darker
+          800: "#6D3E12", // Darkest
+          900: "#5B3310", // Almost black
+        },
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
