@@ -85,7 +85,7 @@ export default function Services() {
                         </div>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="text-lg font-semibold text-gray-200 truncate">
+                        <h3 className="text-lg font-semibold text-gray-200 line-clamp-2">
                           {spec.title}
                         </h3>
                       </div>

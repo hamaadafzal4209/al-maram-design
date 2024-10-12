@@ -37,13 +37,14 @@ const PartnerCard = ({ logo, name }) => {
 
 export function Sponser() {
   return (
-    <div className="relative max-w-7xl mx-auto py-8 flex w-full flex-col items-center justify-center overflow-hidden">
+    <div className="max-w-7xl mx-auto py-8 flex w-full flex-col items-center justify-center overflow-hidden">
       <div className="text-center mb-6">
         <h2 className="text-3xl font-bold text-gray-100 sm:text-4xl mb-4">
           Our Trusted Partners
         </h2>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-          Collaborating with industry leaders to drive innovation and excellence.
+          Collaborating with industry leaders to drive innovation and
+          excellence.
         </p>
       </div>
       <Marquee pauseOnHover className="[--duration:20s]">
@@ -56,8 +57,6 @@ export function Sponser() {
           <PartnerCard key={partner.name} {...partner} />
         ))}
       </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-gray-900"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-gray-900"></div>
     </div>
   );
 }
