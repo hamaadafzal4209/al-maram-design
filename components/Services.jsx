@@ -76,9 +76,7 @@ export default function Services() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {specializations.map((spec, index) => (
               <Fade triggerOnce key={index} delay={index * 100}>
-                <Card
-                  className="overflow-hidden bg-gradient-to-br from-slate-700 to-slate-800 hover:shadow-lg hover:-translate-y-2 transition-all duration-300 bg-gray-800 border border-gray-700"
-                >
+                <Card className="overflow-hidden bg-gradient-to-br from-slate-700 to-slate-800 hover:shadow-lg hover:-translate-y-2 transition-all duration-300 bg-gray-800 border border-gray-700">
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4">
                       <div className="flex-shrink-0">
