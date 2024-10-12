@@ -1,15 +1,12 @@
-import * as React from "react";
-import Image from "next/image";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+"use client";
 
-// Sample data for the cards related to voltage and electricity
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/bundle";
+import { Navigation } from "swiper/modules";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { useRef } from "react";
+
 const cardData = [
   {
     id: 1,
@@ -139,47 +136,70 @@ const cardData = [
 ];
 
 export default function VoltageElectricitySlider() {
+  const swiperRef = useRef(null);
+
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 md:py-8 lg:px-12 xl:px-20">
-      <h2 className="text-3xl font-bold text-center mb-8">
+    <div className="w-full max-w-7xl mx-auto px-4 md:py-8 lg:px-12 xl:px-16 rounded-lg shadow-md">
+      <h2 className="text-3xl font-bold text-center mb-8 text-white">
         What We Offer – Products
       </h2>
-      <Carousel
-        opts={{
-          align: "start",
-          loop: true,
+      <Swiper
+        spaceBetween={30}
+        loop={true}
+        modules={[Navigation]}
+        className="mySwiper"
+        navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }}
+        breakpoints={{
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
         }}
-        className="w-full"
+        onInit={(swiper) => (swiperRef.current = swiper)}
       >
-        <CarouselContent className="-ml-2 md:-ml-3 md:mr-2">
-          {cardData.map((card) => (
-            <CarouselItem
-              key={card.id}
-              className="pl-2 md:pl-4 sm:basis-1/2 md:basis-1/3"
-            >
-              <Card className="h-full">
-                <CardContent className="flex flex-col p-4">
-                  <Image
-                    src={card.image}
-                    alt={card.title}
-                    width={500}
-                    height={300}
-                    className="w-full h-48 object-cover rounded-md mb-4"
-                  />
-                  <h3 className="text-lg font-semibold mb-2">{card.title}</h3>
-                  <ul className="list-disc pl-5 text-sm">
-                    {card.points.map((point, index) => (
-                      <li key={index}>{point}</li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
+        {cardData.map((card) => (
+          <SwiperSlide key={card.id} className="flex justify-center">
+            <div className="bg-gray-800 rounded-lg shadow-2xl overflow-hidden transform transition-transform duration-300 hover:scale-105">
+              <Image
+                src={card.image}
+                alt={card.title}
+                width={500}
+                height={300}
+                className="w-full h-48 object-cover transition-transform duration-300"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-white mb-3">{card.title}</h3>
+                <ul className="list-disc pl-5 text-sm text-gray-300">
+                  {card.points.map((point, index) => (
+                    <li key={index}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      {/* Custom Navigation Component */}
+      <CustomNavigation swiperRef={swiperRef} />
     </div>
   );
 }
+
+const CustomNavigation = ({ swiperRef }) => {
+  return (
+    <div className="flex justify-center mt-6">
+      <button
+        className="custom-prev bg-main-500 text-white p-3 rounded-full shadow-lg hover:bg-main-400 transition duration-300 mr-4 flex items-center justify-center"
+        onClick={() => swiperRef.current?.slidePrev()}
+      >
+        <FaArrowLeft size={20} />
+      </button>
+      <button
+        className="custom-next bg-main-500 text-white p-3 rounded-full shadow-lg hover:bg-main-400 transition duration-300 flex items-center justify-center"
+        onClick={() => swiperRef.current?.slideNext()}
+      >
+        <FaArrowRight size={20} />
+      </button>
+    </div>
+  );
+};

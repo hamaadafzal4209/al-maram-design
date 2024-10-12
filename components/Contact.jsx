@@ -32,7 +32,7 @@ export default function ContactSection() {
               className="mb-4"
             />
             <p className="text-gray-700 leading-relaxed">
-              Almaram Alfaneyah Contracting Co. is a certified channel partner
+              Almaram Alfaneyah Manufacturing Co. is a certified channel partner
               of Schneider Electric, specializing in the manufacturing of LV
               switchgear panels in the Kingdom of Saudi Arabia. With its Head
               Office in Jeddah, the company aims to establish a network of

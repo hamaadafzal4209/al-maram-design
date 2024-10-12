@@ -20,8 +20,8 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <section className="py-16 md:py-20 text-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+    <section className="py-12 md:py-16 text-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
         {/* About Section */}
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Images Section */}
@@ -56,14 +56,14 @@ export default function AboutSection() {
           <div className="lg:w-1/2 text-gray-100">
             <Slide direction="up" triggerOnce duration={1000}>
               <h2 className="text-4xl font-extrabold leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-yellow-500">
-                Almaram Alfaneyah Contracting Company
+                Almaram Alfaneyah Manufacturing Company
               </h2>
             </Slide>
             <Slide direction="up" triggerOnce duration={1000}>
               <p className="text-lg leading-relaxed mb-6 text-gray-300">
-                Almaram Alfaneyah Contracting Co. is a certified channel partner
-                of Schneider Electric, dealing in the manufacturing of LV
-                switchgear panels in the Kingdom of Saudi Arabia. The Head
+                Almaram Alfaneyah Manufacturing Co. is a certified channel
+                partner of Schneider Electric, dealing in the manufacturing of
+                LV switchgear panels in the Kingdom of Saudi Arabia. The Head
                 Office being in Jeddah, the company looks forward to a complete
                 network of its branches in major cities of Saudi Arabia. The
                 company is operating in accordance with the highly acclaimed

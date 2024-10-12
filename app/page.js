@@ -5,7 +5,6 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import VoltageElectricitySlider from "@/components/Products";
 import ScrollToTop from "@/components/ScrollToTop";
-import Service from "@/components/Services";
 import { Sponser } from "@/components/Sponsers";
 import Stats from "@/components/Stats";
 import TeamMember from "@/components/TeamMembers";
@@ -19,7 +18,6 @@ const page = () => {
       <Hero />
       <WhoWeAre />
       <VoltageElectricitySlider />
-      <Service />
       <Stats />
       <WhatWeDoSpecialists />
       <TeamMember />
