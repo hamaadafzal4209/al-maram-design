@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Fade, Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 export default function AboutSection() {
   return (
@@ -11,7 +11,7 @@ export default function AboutSection() {
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Images Section */}
           <div className="lg:w-1/2 grid grid-cols-2 gap-6">
-            <Slide direction="up" triggerOnce duration={1000}>
+            <Fade triggerOnce direction="up">
               <div className="relative h-[300px] md:h-[400px]">
                 <Image
                   src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -22,8 +22,8 @@ export default function AboutSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-30 rounded-lg"></div>
               </div>
-            </Slide>
-            <Slide direction="up" triggerOnce duration={1000}>
+            </Fade>
+            <Fade triggerOnce direction="up" delay={200}>
               <div className="relative h-[300px] md:h-[400px] mt-6">
                 <Image
                   src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&auto=format&fit=crop&q=60"
@@ -34,17 +34,15 @@ export default function AboutSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-30 rounded-lg"></div>
               </div>
-            </Slide>
+            </Fade>
           </div>
 
           {/* Text Section */}
           <div className="lg:w-1/2 text-gray-100">
-            <Slide direction="up" triggerOnce duration={1000}>
+            <Fade triggerOnce direction="up" delay={300}>
               <h2 className="text-2xl md:text-4xl font-extrabold leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-yellow-500">
                 Almaram Alfaneyah Manufacturing Company
               </h2>
-            </Slide>
-            <Slide direction="up" triggerOnce duration={1000}>
               <p className="text-lg leading-relaxed mb-6 text-gray-300">
                 Almaram Alfaneyah Manufacturing Co. is a certified channel
                 partner of Schneider Electric, dealing in the manufacturing of
@@ -54,11 +52,11 @@ export default function AboutSection() {
                 company is operating in accordance with the highly acclaimed
                 IEC, ISO, and ASO standards.
               </p>
-            </Slide>
+            </Fade>
 
             {/* Key Highlights */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              <Slide direction="up" triggerOnce duration={1000}>
+            <Fade triggerOnce direction="up" delay={400}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div className="flex items-center">
                   <Image
                     width={48}
@@ -76,8 +74,6 @@ export default function AboutSection() {
                     </p>
                   </div>
                 </div>
-              </Slide>
-              <Slide direction="up" triggerOnce duration={1000}>
                 <div className="flex items-center">
                   <Image
                     width={48}
@@ -95,21 +91,21 @@ export default function AboutSection() {
                     </p>
                   </div>
                 </div>
-              </Slide>
-            </div>
+              </div>
+            </Fade>
           </div>
         </div>
 
         {/* Team Members Section */}
         <div className="mt-16">
-          <Slide direction="up" triggerOnce duration={1000}>
+          <Fade triggerOnce direction="up" delay={300}>
             <h3 className="text-3xl font-bold text-gray-100 mb-8">
               Meet Our Team
             </h3>
-          </Slide>
+          </Fade>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Team Member 1 */}
-            <Slide direction="up" triggerOnce duration={1000}>
+            <Fade triggerOnce direction="up" delay={300}>
               <div className="text-center group">
                 <div className="relative w-48 h-48 mx-auto overflow-hidden rounded-full shadow-lg transition-transform transform group-hover:scale-110 duration-300 ease-out group-hover:shadow-2xl">
                   <Image
@@ -125,10 +121,10 @@ export default function AboutSection() {
                 </h4>
                 <p className="text-sm text-gray-400">General Manager</p>
               </div>
-            </Slide>
+            </Fade>
 
             {/* Team Member 2 */}
-            <Slide direction="up" triggerOnce duration={1000}>
+            <Fade triggerOnce direction="up" delay={400}>
               <div className="text-center group">
                 <div className="relative w-48 h-48 mx-auto overflow-hidden rounded-full shadow-lg transition-transform transform group-hover:scale-110 duration-300 ease-out group-hover:shadow-2xl">
                   <Image
@@ -144,10 +140,10 @@ export default function AboutSection() {
                 </h4>
                 <p className="text-sm text-gray-400">Technical Director</p>
               </div>
-            </Slide>
+            </Fade>
 
             {/* Team Member 3 */}
-            <Slide direction="up" triggerOnce duration={1000}>
+            <Fade triggerOnce direction="up" delay={500}>
               <div className="text-center group">
                 <div className="relative w-48 h-48 mx-auto overflow-hidden rounded-full shadow-lg transition-transform transform group-hover:scale-110 duration-300 ease-out group-hover:shadow-2xl">
                   <Image
@@ -163,7 +159,7 @@ export default function AboutSection() {
                 </h4>
                 <p className="text-sm text-gray-400">Operations Manager</p>
               </div>
-            </Slide>
+            </Fade>
           </div>
         </div>
       </div>

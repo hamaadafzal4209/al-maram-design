@@ -5,10 +5,10 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import VoltageElectricitySlider from "@/components/Products";
 import ScrollToTop from "@/components/ScrollToTop";
+import Services from "@/components/Services";
 import { Sponser } from "@/components/Sponsers";
 import Stats from "@/components/Stats";
 import TeamMember from "@/components/TeamMembers";
-import WhatWeDoSpecialists from "@/components/WHatWeDo";
 import React from "react";
 
 const page = () => {
@@ -18,8 +18,8 @@ const page = () => {
       <Hero />
       <WhoWeAre />
       <VoltageElectricitySlider />
-      <Stats />
-      <WhatWeDoSpecialists />
+      {/* <Stats /> */}
+      <Services />
       <TeamMember />
       <Sponser />
       <ContactSection />

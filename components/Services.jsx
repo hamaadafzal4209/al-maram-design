@@ -51,22 +51,22 @@ const specializations = [
   },
 ];
 
-export default function WhatWeDoSpecialists() {
+export default function Services() {
   return (
-    <section className="py-12">
+    <section className="py-12 text-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-20">
         <div className="text-center mb-16">
           <Badge
             variant="outline"
-            className="mb-4 text-sm font-medium rounded-full"
+            className="mb-4 text-sm font-medium rounded-full text-gray-400 border-gray-600"
           >
             What We Do
           </Badge>
-          <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+          <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
             We Are Specialists In
           </h2>
           <div className="mt-4 max-w-3xl mx-auto">
-            <p className="text-xl text-gray-500">
+            <p className="text-xl text-gray-400">
               Delivering top-tier electrical solutions with precision and
               expertise.
             </p>
@@ -77,23 +77,22 @@ export default function WhatWeDoSpecialists() {
             {specializations.map((spec, index) => (
               <Fade key={index} delay={index * 100}>
                 <Card
-                  key={index}
-                  className="overflow-hidden hover:shadow-md hover:-translate-y-2 transition-all duration-300"
+                  className="overflow-hidden hover:shadow-lg hover:-translate-y-2 transition-all duration-300 bg-gray-800 border border-gray-700"
                 >
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4">
                       <div className="flex-shrink-0">
                         <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-main">
-                          <spec.icon className="h-8 w-8" />
+                          <spec.icon className="h-8 w-8 text-main" />
                         </div>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="text-lg font-semibold text-gray-900 truncate">
+                        <h3 className="text-lg font-semibold text-gray-200 truncate">
                           {spec.title}
                         </h3>
                       </div>
                     </div>
-                    <p className="mt-4 text-base text-gray-500">
+                    <p className="mt-4 text-base text-gray-400">
                       {spec.description}
                     </p>
                   </CardContent>
