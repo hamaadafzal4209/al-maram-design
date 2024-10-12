@@ -24,13 +24,15 @@ const secondRow = partners.slice(partners.length / 2);
 const PartnerCard = ({ logo, name }) => {
   return (
     <figure className={cn("relative cursor-pointer mx-6")}>
-      <Image
-        width={500}
-        height={500}
-        className="object-contain w-32"
-        alt={name}
-        src={logo}
-      />
+      <div className="relative w-32 h-32 overflow-hidden">
+        <Image
+          width={500}
+          height={500}
+          className="object-contain w-full h-full"
+          alt={name}
+          src={logo}
+        />
+      </div>
     </figure>
   );
 };
@@ -43,8 +45,7 @@ export function Sponser() {
           Our Trusted Partners
         </h2>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-          Collaborating with industry leaders to drive innovation and
-          excellence.
+          Collaborating with industry leaders to drive innovation and excellence.
         </p>
       </div>
       <Marquee pauseOnHover className="[--duration:20s]">
