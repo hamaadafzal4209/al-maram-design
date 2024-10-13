@@ -38,7 +38,7 @@ const cardData = [
     id: 3,
     title: "Renewable Energy",
     image:
-    "https://images.unsplash.com/photo-1545208942-e1c9c916524b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fFJlbmV3YWJsZSUyMEVuZXJneXxlbnwwfHwwfHx8MA%3D%3D",
+      "https://images.unsplash.com/photo-1545208942-e1c9c916524b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fFJlbmV3YWJsZSUyMEVuZXJneXxlbnwwfHwwfHx8MA%3D%3D",
     points: [
       "Solar panel voltage",
       "Wind turbine generators",
@@ -61,22 +61,9 @@ const cardData = [
   },
   {
     id: 5,
-    title: "Smart Home Technology",
-    image:
-      "https://images.unsplash.com/photo-1558002038-1055907df827?w=500&h=300&fit=crop",
-    points: [
-      "Home automation",
-      "Energy monitoring",
-      "Voltage optimization",
-      "Smart meters",
-      "IoT devices",
-    ],
-  },
-  {
-    id: 6,
     title: "Industrial Electrical Systems",
     image:
-      "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=500&h=300&fit=crop",
+      "https://cdn.pixabay.com/photo/2015/12/07/10/55/electric-1080584_1280.jpg",
     points: [
       "Three-phase power",
       "Motor control centers",
@@ -85,10 +72,10 @@ const cardData = [
     ],
   },
   {
-    id: 7,
+    id: 6,
     title: "Lightning Protection",
     image:
-      "https://images.unsplash.com/photo-1429552077091-836152271555?w=500&h=300&fit=crop",
+      "https://plus.unsplash.com/premium_photo-1661911021547-b0188f22d548?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8TGlnaHRuaW5nJTIwUHJvdGVjdGlvbnxlbnwwfHwwfHx8MA%3D%3D",
     points: [
       "Voltage spikes",
       "Grounding techniques",
@@ -98,7 +85,7 @@ const cardData = [
     ],
   },
   {
-    id: 8,
+    id: 7,
     title: "Power Generation",
     image:
       "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=500&h=300&fit=crop",
@@ -110,7 +97,7 @@ const cardData = [
     ],
   },
   {
-    id: 9,
+    id: 8,
     title: "Electrical Safety Equipment",
     image:
       "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=500&h=300&fit=crop",
@@ -123,10 +110,10 @@ const cardData = [
     ],
   },
   {
-    id: 10,
+    id: 9,
     title: "Energy Efficiency",
     image:
-      "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=500&h=300&fit=crop",
+      "https://cdn.pixabay.com/photo/2022/10/13/10/24/solar-panel-7518786_1280.jpg",
     points: [
       "LED lighting technology",
       "Variable frequency drives",
