@@ -157,7 +157,7 @@ const Navbar = () => {
 
         <div className="hidden md:flex md:items-center">
           <Link href="/">
-            <Button className="bg-gradient-to-r from-main-300 to-main-500 text-white text-base py-2 px-4 rounded-md shadow-md hover:shadow-lg hover:from-main-400 hover:to-main-600 transition duration-200">
+            <Button className="bg-gradient-to-r from-main-300 to-main-400 text-white text-base py-2 px-4 rounded-md shadow-md hover:shadow-lg hover:from-main-400 hover:to-main-300 transition duration-200">
               Contact Us
             </Button>
           </Link>
