@@ -7,7 +7,6 @@ import VoltageElectricitySlider from "@/components/Products";
 import ScrollToTop from "@/components/ScrollToTop";
 import Services from "@/components/Services";
 import { Sponser } from "@/components/Sponsers";
-import Stats from "@/components/Stats";
 import TestimonialSection from "@/components/Testimonial";
 import React from "react";
 
@@ -20,7 +19,7 @@ const page = () => {
       <VoltageElectricitySlider />
       <Services />
       <Sponser />
-      <TestimonialSection/>
+      <TestimonialSection />
       <ContactSection />
       <Footer />
       <ScrollToTop />
