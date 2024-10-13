@@ -158,7 +158,7 @@ export default function ContactSection() {
               </h3>
               <form className="space-y-4">
                 <div className="flex flex-col">
-                  <label htmlFor="name" className="text-gray-400">
+                  <label htmlFor="name" className="text-gray-400 pb-1">
                     Name
                   </label>
                   <input
@@ -170,7 +170,7 @@ export default function ContactSection() {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label htmlFor="email" className="text-gray-400">
+                  <label htmlFor="email" className="text-gray-400 pb-1">
                     Email
                   </label>
                   <input
@@ -182,7 +182,7 @@ export default function ContactSection() {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label htmlFor="message" className="text-gray-400">
+                  <label htmlFor="message" className="text-gray-400 pb-1">
                     Message
                   </label>
                   <textarea
