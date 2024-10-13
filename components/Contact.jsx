@@ -131,15 +131,23 @@ export default function ContactSection() {
             <h2 className="text-2xl font-semibold text-main mb-2">
               Office Address
             </h2>
-            <div className="flex flex-col space-y-2 text-gray-400">
-              <p className="flex items-center">
-                <FaMapMarkerAlt className="text-main mr-2" />{" "}
+            <div className="flex flex-col gap-4 text-gray-400">
+              <div className="flex items-center gap-4">
+                <div className="gradient-icon-border">
+                  <span className="flex items-center justify-center w-[44px] h-[44px] bg-gradient-to-br from-slate-700 to-slate-800 rounded-full text-gray-300 hover:text-blue-500 transition-colors duration-300">
+                    <FaMapMarkerAlt className="text-xl" />
+                  </span>
+                </div>
                 <span>Location: 108930, Jeddah 21351, K.S.A</span>
-              </p>
-              <p className="flex items-center">
-                <FaPhoneAlt className="text-main mr-2" />
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="gradient-icon-border">
+                  <span className="flex items-center justify-center w-[44px] h-[44px] bg-gradient-to-br from-slate-700 to-slate-800 rounded-full text-gray-300 hover:text-green-700 transition-colors duration-300">
+                    <FaPhoneAlt className="text-xl" />
+                  </span>
+                </div>
                 <span>Call Us: +966 56 910 5617</span>
-              </p>
+              </div>
             </div>
           </div>
         </div>
