@@ -16,6 +16,7 @@ import {
   TooltipTrigger,
   TooltipContent,
 } from "./ui/tooltip";
+import { Button } from "./ui/button";
 
 export default function ContactSection() {
   return (
@@ -149,7 +150,71 @@ export default function ContactSection() {
                 <span>Call Us: +966 56 910 5617</span>
               </div>
             </div>
+
+            {/* Contact Form */}
+            <div className="mt-8">
+              <h3 className="text-xl font-semibold text-main mb-4">
+                Send Us a Message
+              </h3>
+              <form className="space-y-4">
+                <div className="flex flex-col">
+                  <label htmlFor="name" className="text-gray-400">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    className="px-4 py-2 rounded-md bg-gray-700 text-gray-300 border border-gray-600 focus:ring focus:ring-main focus:border-main"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <label htmlFor="email" className="text-gray-400">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    className="px-4 py-2 rounded-md bg-gray-700 text-gray-300 border border-gray-600 focus:ring focus:ring-main focus:border-main"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <label htmlFor="message" className="text-gray-400">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    rows="4"
+                    className="px-4 py-2 rounded-md bg-gray-700 text-gray-300 border border-gray-600 focus:ring focus:ring-main focus:border-main"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
+                </div>
+                <Button
+                  type="submit"
+                  className="block w-full bg-gradient-to-r from-main-300 to-main-500 text-white text-base py-2 px-4 rounded-md shadow-md hover:shadow-lg hover:from-main-400 hover:to-main-600 transition duration-200"
+                >
+                  Submit
+                </Button>
+              </form>
+            </div>
           </div>
+        </div>
+
+        {/* Google Maps Embed */}
+        <div className="mt-12">
+          <iframe
+            title="Almaram Alfaneyah Office Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.486602175791!2d108.20216201474857!3d16.05440668888467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218dd7b18b6df%3A0xa3a14413516d1dd7!2sJeddah!5e0!3m2!1sen!2ssa!4v1630417011923!5m2!1sen!2ssa"
+            width="100%"
+            height="450"
+            allowFullScreen=""
+            loading="lazy"
+            className="rounded-lg shadow-lg"
+          ></iframe>
         </div>
       </div>
     </section>
