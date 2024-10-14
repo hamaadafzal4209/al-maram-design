@@ -8,128 +8,101 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useRef } from "react";
 import { Card, CardContent } from "./ui/card";
 
+// Updated card data to reflect AMF-SA's offerings
 const cardData = [
   {
     id: 1,
-    title: "High Voltage Power Lines",
+    title: "Power System Engineering",
     image:
       "https://plus.unsplash.com/premium_photo-1682145728214-dbd62535af3f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     points: [
-      "Transmission of electricity",
-      "High voltage systems",
-      "Power grid infrastructure",
-      "Safety considerations",
-      "Long-distance energy transfer",
+      "Electrical grid design",
+      "Transmission & distribution networks",
+      "Energy management systems",
+      "Power system protection",
     ],
   },
   {
     id: 2,
-    title: "Circuit Boards",
+    title: "Renewable Energy Solutions",
     image:
       "https://images.unsplash.com/photo-1631378297854-185cff6b0986?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fENpcmN1aXQlMjBCb2FyZHN8ZW58MHx8MHx8fDA%3D",
     points: [
-      "Electronic components",
-      "Voltage regulation",
-      "Circuit design",
-      "Power distribution",
+      "Solar power systems",
+      "Wind energy integration",
+      "Hydroelectricity",
+      "Energy storage technologies",
     ],
   },
   {
     id: 3,
-    title: "Renewable Energy",
+    title: "Electrical Installation & Maintenance",
     image:
       "https://images.unsplash.com/photo-1545208942-e1c9c916524b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fFJlbmV3YWJsZSUyMEVuZXJneXxlbnwwfHwwfHx8MA%3D%3D",
     points: [
-      "Solar panel voltage",
-      "Wind turbine generators",
-      "Energy storage systems",
-      "Inverter technology",
-      "Grid integration",
+      "Low & medium voltage systems",
+      "Industrial & commercial installations",
+      "Routine maintenance",
+      "Safety inspections",
     ],
   },
   {
     id: 4,
-    title: "Electric Vehicles",
+    title: "Automation & Control Systems",
     image:
       "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=500&h=300&fit=crop",
     points: [
-      "Battery voltage management",
-      "Charging infrastructure",
-      "Motor efficiency",
-      "Power electronics",
+      "SCADA systems integration",
+      "PLC programming",
+      "Process automation",
+      "Industrial control systems",
     ],
   },
   {
     id: 5,
-    title: "Industrial Electrical Systems",
+    title: "Energy Efficiency & Consulting",
     image:
       "https://cdn.pixabay.com/photo/2015/12/07/10/55/electric-1080584_1280.jpg",
     points: [
-      "Three-phase power",
-      "Motor control centers",
-      "SCADA systems",
-      "Power factor correction",
+      "Energy audits",
+      "Energy-saving technologies",
+      "Cost optimization",
+      "Sustainable building solutions",
     ],
   },
   {
     id: 6,
-    title: "Lightning Protection",
+    title: "Lightning Protection Systems",
     image:
       "https://plus.unsplash.com/premium_photo-1661911021547-b0188f22d548?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8TGlnaHRuaW5nJTIwUHJvdGVjdGlvbnxlbnwwfHwwfHx8MA%3D%3D",
     points: [
-      "Voltage spikes",
-      "Grounding techniques",
-      "Surge arresters",
+      "Grounding systems",
+      "Surge protection devices",
       "Transient voltage suppression",
-      "Equipment protection",
+      "Building protection",
     ],
   },
   {
     id: 7,
-    title: "Power Generation",
+    title: "Turnkey Electrical Projects",
     image:
       "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=500&h=300&fit=crop",
     points: [
-      "Generators and alternators",
-      "Voltage regulation",
-      "Frequency control",
-      "Power plant operations",
-    ],
-  },
-  {
-    id: 8,
-    title: "Electrical Safety Equipment",
-    image:
-      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=500&h=300&fit=crop",
-    points: [
-      "Personal protective equipment",
-      "Voltage testers",
-      "Insulation materials",
-      "Lockout/tagout procedures",
-      "Arc flash protection",
-    ],
-  },
-  {
-    id: 9,
-    title: "Energy Efficiency",
-    image:
-      "https://cdn.pixabay.com/photo/2022/10/13/10/24/solar-panel-7518786_1280.jpg",
-    points: [
-      "LED lighting technology",
-      "Variable frequency drives",
-      "Energy-efficient appliances",
-      "Building management systems",
+      "End-to-end project management",
+      "Electrical infrastructure",
+      "Customized power solutions",
+      "Commissioning and testing",
     ],
   },
 ];
 
-export default function VoltageElectricitySlider() {
+export default function ElectricalServicesSlider() {
   const swiperRef = useRef(null);
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 py-0 lg:px-12 xl:px-16">
       <h2 className="text-3xl font-bold text-center mb-8 text-white">
-        What We Offer – Products
+        Comprehensive Electrical Solutions – Our Expertise
       </h2>
       <Swiper
         spaceBetween={30}
