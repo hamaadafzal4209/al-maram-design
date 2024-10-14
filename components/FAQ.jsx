@@ -3,10 +3,15 @@
 import React, { useState } from "react";
 
 const FAQSection = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndexLeft, setActiveIndexLeft] = useState(null);
+  const [activeIndexRight, setActiveIndexRight] = useState(null);
 
-  const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
+  const toggleAccordion = (index, side) => {
+    if (side === "left") {
+      setActiveIndexLeft(activeIndexLeft === index ? null : index);
+    } else {
+      setActiveIndexRight(activeIndexRight === index ? null : index);
+    }
   };
 
   const faqData = [
@@ -62,47 +67,93 @@ const FAQSection = () => {
           </h2>
         </div>
 
-        <div className="space-y-6">
-          {faqData.map((faq, index) => (
-            <div
-              key={index}
-              className={`border border-gray-700 rounded-lg p-6 transition-all duration-500 ${
-                activeIndex === index
-                  ? "bg-gradient-to-br from-slate-700 to-slate-800 transition-colors duration-300"
-                  : "bg-gray-800 transition-colors duration-300"
-              }`}
-            >
-              <button
-                className="w-full text-left flex justify-between items-center"
-                onClick={() => toggleAccordion(index)}
-              >
-                <h5 className="text-lg font-medium">{faq.question}</h5>
-                <svg
-                  className={`w-6 h-6 transition-transform duration-500 ${
-                    activeIndex === index ? "transform rotate-180" : ""
-                  }`}
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
+        <div className="flex flex-col md:flex-row gap-6">
+          <div className="flex flex-col gap-6">
+            {faqData.slice(0, 4).map((faq, index) => (
               <div
-                className={`overflow-hidden transition-max-height duration-500 ${
-                  activeIndex === index ? "max-h-48" : "max-h-0"
+                key={index}
+                className={`border border-gray-700 rounded-lg p-6 transition-all duration-500 ${
+                  activeIndexLeft === index
+                    ? "bg-gradient-to-br from-slate-700 to-slate-800 transition-colors duration-300"
+                    : "bg-gray-800 transition-colors duration-300"
                 }`}
               >
-                <p className="mt-4 text-gray-400">{faq.answer}</p>
+                <button
+                  className="w-full text-left flex justify-between items-center"
+                  onClick={() => toggleAccordion(index, "left")}
+                >
+                  <h5 className="text-lg font-medium">{faq.question}</h5>
+                  <svg
+                    className={`w-6 h-6 transition-transform duration-500 ${
+                      activeIndexLeft === index ? "transform rotate-180" : ""
+                    }`}
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                <div
+                  className={`overflow-hidden transition-max-height duration-500 ${
+                    activeIndexLeft === index ? "max-h-48" : "max-h-0"
+                  }`}
+                >
+                  <p className="mt-4 text-gray-400">{faq.answer}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="flex flex-col gap-6">
+            {faqData.slice(4).map((faq, index) => (
+              <div
+                key={index + 4} // Adjusted index for the right side
+                className={`border border-gray-700 rounded-lg p-6 transition-all duration-500 ${
+                  activeIndexRight === index + 4 // Adjusted for overall index
+                    ? "bg-gradient-to-br from-slate-700 to-slate-800 transition-colors duration-300"
+                    : "bg-gray-800 transition-colors duration-300"
+                }`}
+              >
+                <button
+                  className="w-full text-left flex justify-between items-center"
+                  onClick={() => toggleAccordion(index + 4, "right")} // Adjusted index for the right side
+                >
+                  <h5 className="text-lg font-medium">{faq.question}</h5>
+                  <svg
+                    className={`w-6 h-6 transition-transform duration-500 ${
+                      activeIndexRight === index + 4
+                        ? "transform rotate-180"
+                        : ""
+                    }`}
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                <div
+                  className={`overflow-hidden transition-max-height duration-500 ${
+                    activeIndexRight === index + 4 ? "max-h-48" : "max-h-0"
+                  }`}
+                >
+                  <p className="mt-4 text-gray-400">{faq.answer}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
