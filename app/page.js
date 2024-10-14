@@ -1,5 +1,6 @@
 import WhoWeAre from "@/components/AboutUs";
 import ContactSection from "@/components/Contact";
+import FAQSection from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
@@ -18,6 +19,7 @@ const page = () => {
       <WhoWeAre />
       <VoltageElectricitySlider />
       <Services />
+      <FAQSection/>
       <Sponser />
       <TestimonialSection />
       <ContactSection />
