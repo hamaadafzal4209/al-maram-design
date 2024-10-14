@@ -14,7 +14,7 @@ export default function AboutSection() {
             <Fade triggerOnce direction="up">
               <div className="relative h-[300px] md:h-[400px]">
                 <Image
-                  src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  src="https://plus.unsplash.com/premium_photo-1661911309991-cc81afcce97d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Modern manufacturing facility with robotic arms"
                   layout="fill"
                   objectFit="cover"
