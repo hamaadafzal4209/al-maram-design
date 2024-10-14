@@ -12,42 +12,43 @@ import {
 } from "lucide-react";
 import { Fade } from "react-awesome-reveal";
 
+// Updated specializations data based on AMF-SA website
 const specializations = [
   {
     icon: CircleIcon,
-    title: "Manufacturing of LV panel boards",
+    title: "Turnkey Electrical Solutions",
     description:
-      "State-of-the-art production of low voltage panel boards for various applications, ensuring high efficiency, reliability, and compliance with international standards.",
+      "Providing complete turnkey solutions for electrical installations, covering design, procurement, installation, and commissioning for various industries.",
   },
   {
     icon: CableIcon,
-    title: "Complete wiring and cable management",
+    title: "Electrical Panel Manufacturing",
     description:
-      "Expert cable terminations, connections, indications, and labeling of panels, ensuring safety, organization, and ease of maintenance for all electrical systems.",
+      "Manufacturing high-quality electrical panels with advanced technology to meet the diverse needs of commercial and industrial applications.",
   },
   {
     icon: WrenchIcon,
-    title: "Supply and installation",
+    title: "Project Management and Execution",
     description:
-      "Seamless supply and professional installation of panel boards, guaranteeing adherence to specifications and enhancing the overall functionality of your electrical systems.",
+      "Delivering projects on time and within budget with professional project management, ensuring seamless integration of all electrical systems.",
   },
   {
     icon: TestTubeIcon,
-    title: "Testing and Commissioning",
+    title: "Testing and Quality Assurance",
     description:
-      "Rigorous testing and commissioning to ensure optimal performance, reliability, and safety, providing peace of mind and thorough documentation for future reference.",
+      "Comprehensive testing and quality assurance services, ensuring the safety and efficiency of all installed electrical systems.",
   },
   {
     icon: TruckIcon,
-    title: "After sales services",
+    title: "Maintenance and Support",
     description:
-      "Comprehensive support and maintenance services post-installation, including regular inspections, troubleshooting, and prompt response to customer inquiries and concerns.",
+      "Offering ongoing maintenance and support services to ensure the longevity and optimal performance of electrical systems.",
   },
   {
     icon: ShieldCheckIcon,
-    title: "Predictive and preventive maintenance",
+    title: "Compliance and Safety Standards",
     description:
-      "Advanced maintenance strategies to prevent issues and extend equipment life, employing the latest technologies and methodologies to enhance system reliability and performance.",
+      "Ensuring that all installations meet local and international safety and compliance standards for a secure and reliable electrical infrastructure.",
   },
 ];
 
@@ -63,12 +64,12 @@ export default function Services() {
             What We Do
           </Badge>
           <h2 className="text-3xl font-extrabold tracking-tight md:text-5xl">
-            We Are Specialists In
+            Our Core Specializations
           </h2>
           <div className="mt-4 max-w-3xl mx-auto">
             <p className="text-xl text-gray-400">
-              Delivering top-tier electrical solutions with precision and
-              expertise.
+              Delivering end-to-end electrical solutions with quality,
+              expertise, and professionalism.
             </p>
           </div>
         </div>
@@ -90,7 +91,7 @@ export default function Services() {
                         </h3>
                       </div>
                     </div>
-                    <p className="mt-4 text-base text-gray-400 line-clamp-4">
+                    <p className="mt-4 text-base text-gray-400 sm:line-clamp-4">
                       {spec.description}
                     </p>
                   </CardContent>
