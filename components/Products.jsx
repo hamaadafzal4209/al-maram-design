@@ -128,7 +128,7 @@ export default function ElectricalServicesSlider() {
                 className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
               />
               <CardContent className="flex-grow p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">
+                <h3 className="text-xl font-semibold text-white mb-3 truncate">
                   {card.title}
                 </h3>
                 <ul className="list-disc pl-5 text-sm text-gray-300">
