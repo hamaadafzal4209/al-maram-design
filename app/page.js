@@ -19,7 +19,7 @@ const page = () => {
       <WhoWeAre />
       <VoltageElectricitySlider />
       <Services />
-      <FAQSection/>
+      <FAQSection />
       <Sponser />
       <TestimonialSection />
       <ContactSection />
